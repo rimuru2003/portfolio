@@ -1,28 +1,27 @@
 .ho1 {
-    background:red;
-     width:80%;
-      position:absolute;
-       right:5rem;
-       height:75%;
-        top:7rem;
+  /* background: red; */
+  /* width: 80%; */
+  margin: 100px 125px;
+  padding: 50px;
+  /* position: absolute; */
+  /* right: 5rem; */
+  height: 75%;
+  /* top: 7rem; */
+  display: flex;
 }
 
 .ho2 {
-    position:absolute;
-     top:9rem;
-      left:6rem;
 }
 
 .ho5 {
-    width:50%;
+  width: 50%;
 }
 .ho6 {
-    /* background: white; */
-    height: 23rem;
-    width: 23rem;
-    position: absolute;
-    left: 65%;
-    top: 20%;
-    border-radius: 50% 20% / 10% 40%;
-    border: 2px solid black; 
-  }
+  /* background: white; */
+  height: 23rem;
+  width: 50rem;
+  /* position: absolute; */
+
+  border-radius: 50% 20% / 10% 40%;
+  border: 2px solid black;
+}

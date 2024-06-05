@@ -1,0 +1,18 @@
+.p1 {
+  height: 40rem;
+  /* background-color: aqua; */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 2rem 2rem;
+  padding: 25px;
+}
+.p2 {
+  height: 17rem;
+  width: 17rem;
+  background-color: rgb(89, 164, 75);
+  flex: 1 1 25%;
+  border-radius: 5% 15% / 5% 15%;
+  border: 2px solid black;
+}

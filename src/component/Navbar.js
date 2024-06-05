@@ -1,20 +1,21 @@
-import React from 'react'
-
+import React from "react";
+import "../css/Navbar.css";
 const Navbar = () => {
   return (
-  
-    <div style={{ display: "flex", height: "60px", justifyContent: "space-between", alignItems: "center", columnGap: "30px" , paddingRight:"10%" }}>
-      <h1 style={{paddingLeft:"70px"}}>Aryan</h1>
-    <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', columnGap: '30px' , fontSize: '20px', color: 'black' , fontWeight:"bold",}}>
+    <div className="n1" style={{}}>
+      <h1 className="n2" style={{}}>
+        Aryan
+      </h1>
+      <ul className="n3" style={{}}>
         <li style={{}}>Home</li>
         <li style={{}}>About</li>
         <li style={{}}>Service</li>
         <li style={{}}>Project</li>
         <li style={{}}>Stack</li>
         <li style={{}}>Resume</li>
-    </ul>
-</div>
-  )
-}
+      </ul>
+    </div>
+  );
+};
 
-export default Navbar
+export default Navbar;
