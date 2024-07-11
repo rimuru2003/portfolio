@@ -12,36 +12,39 @@
   width: 50%;
 }
 .ho6 {
-  /* position: absolute; */
-  
-  /* transform: translate(-50%, -50%); */
-  animation: rotatedot 5s linear infinite;
+ 
+  object-fit: cover;
+  margin: -80px -40px 0 100px;
+
+  /* animation: rotatedot 5s linear infinite; */
 }
 
+
 .ho7 {
-  position: relative;
-  margin: -80px -40px 0 100px;
+position: relative;
+background-size: cover;
+background-position: center center;
+
+
   height: 25rem;
   width: 25rem;
   object-fit: cover;
-  border: 5px solid #000;
-  border-radius: 50%;
-  border-style: dashed;
-  animation: rotatedots 5s linear infinite;
+
+  box-shadow: 0 5px 5px 5px rgba(13, 110, 253, 0.2);
+  animation: animate 15s ease-in-out infinite;
+  transition: all 1s ease-in-out;
 }
 
-@keyframes rotatedot {
- 
-  100% {
-    transform: rotate(360deg) ;
+@keyframes animate {
+  0%, 100%{
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  50%{
+      border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
   }
 }
-@keyframes rotatedots {
- 
-  100% {
-    transform: rotate(-360deg) ;
-  }
-}
+
+
 
 
 
