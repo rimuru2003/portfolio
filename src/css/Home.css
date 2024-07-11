@@ -1,27 +1,47 @@
 .ho1 {
-  /* background: red; */
-  /* width: 80%; */
-  margin: 100px 125px;
+  margin: 130px 125px;
   padding: 50px;
-  /* position: absolute; */
-  /* right: 5rem; */
+ 
   height: 75%;
-  /* top: 7rem; */
+
   display: flex;
 }
 
-/* .ho2 {
-} */
 
 .ho5 {
   width: 50%;
 }
 .ho6 {
-  /* background: white; */
-  height: 23rem;
-  width: 50rem;
   /* position: absolute; */
-
-  border-radius: 50% 20% / 10% 40%;
-  border: 2px solid black;
+  
+  /* transform: translate(-50%, -50%); */
+  animation: rotatedot 5s linear infinite;
 }
+
+.ho7 {
+  position: relative;
+  margin: -80px -40px 0 100px;
+  height: 25rem;
+  width: 25rem;
+  object-fit: cover;
+  border: 5px solid #000;
+  border-radius: 50%;
+  border-style: dashed;
+  animation: rotatedots 5s linear infinite;
+}
+
+@keyframes rotatedot {
+ 
+  100% {
+    transform: rotate(360deg) ;
+  }
+}
+@keyframes rotatedots {
+ 
+  100% {
+    transform: rotate(-360deg) ;
+  }
+}
+
+
+

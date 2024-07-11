@@ -1,21 +1,22 @@
 .p1 {
   display: grid;
+  justify-content: center;
+  align-content: center;
   grid-template-columns: repeat(3, 1fr);
-  
-  gap: 100px;
-  padding: 20px;
-  /* justify-content: space-around ; */
+  gap: 50px;
+  padding: 100px;
+
 }
 
 .p {
-  height: 200px;
-  width: 200px;
+  height: 500px;
+  width: 400px;
   /* background-color: rgb(216, 237, 212); */
   border-radius: 10px;
   border: 2px solid black;
   /* position: relative; */
   text-align: center;
-  transition: transform 1s;
+  transition: transform 2s;
   transform-style: preserve-3d;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }

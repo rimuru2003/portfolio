@@ -1,0 +1,23 @@
+/* Skill.css */
+.so1 {
+  /* background-color: green; */
+  height: 30rem;
+  display: grid;
+  place-items: center;
+}
+
+.so2 {
+  width: 50%;
+  font-size: 100px;
+
+  /* background-color: red; */
+  display: grid;
+  place-items: center;
+
+  grid-template-columns: 100px 100px 100px 100px 100px 100px 100px 100px  ;
+}
+
+.icon {
+  font-size: 90px; /* adjust font size to your liking */
+  margin: 10px; /* add some margin to space out the icons */
+}

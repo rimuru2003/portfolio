@@ -1,0 +1,27 @@
+.a1{
+    height:600px;
+    /* background-color: brown;  */
+    display:flex;   
+    
+
+}
+.a2{
+   
+    height: 27rem;
+    margin:100px;
+    border-radius: 15% 150% 120% 120% ;
+    border: 2px solid black;
+   
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    shape-outside: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+   
+}
+.a4
+{
+    padding: 150px 0px 0px 150px;
+
+}
+.a6{
+    height:1rem;
+    width:35rem;
+}

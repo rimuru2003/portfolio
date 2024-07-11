@@ -16,18 +16,8 @@ const Project = () => {
         <div className="front-face">Front</div>
         <div className="back-face">Back</div>
       </div>
-      <div className="p">
-        <div className="front-face">Front</div>
-        <div className="back-face">Back</div>
-      </div>
-      <div className="p">
-        <div className="front-face">Front</div>
-        <div className="back-face">Back</div>
-      </div>
-      <div className="p">
-        <div className="front-face">Front</div>
-        <div className="back-face">Back</div>
-      </div>
+      
+      
     </div>
   );
 };
