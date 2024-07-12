@@ -6,9 +6,7 @@ import About from "./component/About";
 import Skill from "./component/Skill";
 import Contact from "./component/Contact";
 import Experience from "./component/Experience";
-import { Helmet } from 'react-helmet';
-
-
+import { Helmet } from "react-helmet";
 
 function App() {
   return (
@@ -22,11 +20,8 @@ function App() {
       <About />
       <Skill />
       <Project />
-      <Experience/>
-      <Contact/>
-      
-
-
+      <Experience />
+      <Contact />
     </div>
   );
 }
