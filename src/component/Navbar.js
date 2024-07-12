@@ -2,26 +2,38 @@ import React, { useEffect, useState } from "react";
 import "../css/Navbar.css";
 
 const Navbar = () => {
-  const [navState, setNavState] = useState(false);
-
-  const onnavscroll = () => {
-    if (window.scrollY > 40) {
-      setNavState(true);
-    } else {
-      setNavState(false);
-    }
-  };
+  const [scrollData, setScrollData] = useState({
+    y: 0,
+    lastY: 0,
+  });
 
   useEffect(() => {
-    window.addEventListener("scroll", onnavscroll);
+    const handleScroll = () => {
+      setScrollData((prevState) => ({
+        y: window.scrollY,
+        lastY: prevState.y,
+      }));
+    };
+
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener("scroll", onnavscroll);
-      
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
+  useEffect(() => {
+    const headerElement = document.getElementById("header");
+    if (headerElement) {
+      if (scrollData.y > 100 && scrollData.lastY < scrollData.y) {
+        headerElement.classList.add("hideNav");
+      } else {
+        headerElement.classList.remove("hideNav");
+      }
+    }
+  }, [scrollData]);
+
   return (
-    <div className={`n1 ${navState ? "blur" : ""}`}>
+    <div id="header" className="n1">
       <h1 className="n2">Aryan</h1>
       <ul className="n3">
         <li>Home</li>
