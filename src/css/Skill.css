@@ -5,7 +5,9 @@
   display: grid;
   place-items: center;
 }
-
+.skillheading{
+  font-size: 2.8rem;
+}
 .so2 {
   width: 50%;
   font-size: 100px;
@@ -21,6 +23,10 @@
   font-size: 90px; /* adjust font size to your liking */
   margin: 10px; /* add some margin to space out the icons */
   animation: bubble 15s linear infinite;
+  filter:drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
+}
+.icon:hover{
+  cursor:pointer;
 }
 
 @keyframes bubble {
