@@ -6,7 +6,7 @@ const Skill = () => {
   return (
     <>
       <div className="so1">
-        <h1>Stack</h1>
+        <h1 className="skillheading">Stack</h1>
         <div className="so2">
           <i className="devicon-html5-plain colored icon"></i>
           <i className="devicon-mongodb-plain colored icon"></i>
