@@ -22,6 +22,7 @@ function App() {
       <Project />
       <Experience />
       <Contact />
+        
     </div>
   );
 }

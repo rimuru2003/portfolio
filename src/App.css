@@ -1,8 +1,14 @@
 @import url('https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css');
 
-.a01 {
- 
-  margin: 50px;
-  
-
+body{
+/*
+* Created with https://www.css-gradient.com
+* Gradient link: https://www.css-gradient.com/?c1=767575&c2=c6c3c2&gt=c&gd=dtt
+*/
+background: #767575;
+background: conic-gradient(from 0deg, #767575, #C6C3C2);
 }
+
+
+
+

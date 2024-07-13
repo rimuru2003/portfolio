@@ -1,50 +1,49 @@
 .ho1 {
   margin: 130px 125px;
   padding: 50px;
- 
-  height: 75%;
-
+  /* height: 75%; */
   display: flex;
+
+
 }
+
+
+
+
+
+.ho3{
+
+}
+
 
 
 .ho5 {
-  width: 50%;
+  width: 70%;
 }
+
 .ho6 {
- 
   object-fit: cover;
+  /* padding-top:5px; */
   margin: -80px -40px 0 100px;
-
-  /* animation: rotatedot 5s linear infinite; */
 }
-
 
 .ho7 {
-position: relative;
-background-size: cover;
-background-position: center center;
 
-
+  /* background-size: cover; */
+  background-position: center center;
   height: 25rem;
   width: 25rem;
   object-fit: cover;
-
   box-shadow: 0 5px 5px 5px rgba(13, 110, 253, 0.2);
-  animation: animate 15s ease-in-out infinite;
+  animation: animate 8s ease-in-out infinite;
   transition: all 1s ease-in-out;
 }
 
 @keyframes animate {
-  0%, 100%{
-      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  0%, 100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
   }
-  50%{
-      border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
   }
 }
-
-
-
-
-
