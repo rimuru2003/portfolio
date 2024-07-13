@@ -5,35 +5,24 @@
     
 
 }
-.a2 {
-    position: relative;
-    background-size: cover;
-    background-position: center center;
-    
-    margin:100px;
-      height: 27rem;
-      width: 25rem;
-      object-fit: cover;
-    
-      box-shadow: 0 5px 5px 5px rgba(13, 110, 253, 0.2);
-      animation: animate 15s ease-in-out infinite;
-      transition: all 1s ease-in-out;
-    }
-    
-    @keyframes animate {
-      0%, 100%{
-          border-radius: 60% 30% 70% 40%/ 60% 40% 30% 70% ;
-      }
-      50%{
-          border-radius: 50% 60% 30% 60%  / 30% 60% 70% 40%;
-      }
-    }
+.a2{
+   filter:drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
+        margin: 2rem 4rem;
+}
+  
 .a4
 {
-    padding: 150px 0px 0px 150px;
-
+    height:5rem;
+    padding: 1rem 0rem 0rem 6rem; 
+    color:white;
+    /* background-color:black; */
+}
+.a7{
+    padding:10px 0px 0px 350px;
 }
 .a6{
-    height:1rem;
-    width:35rem;
+    padding:0px 0px 0px 130px;
+    /* background-color:red; */
+    height:auto;
+    width:37rem;
 }

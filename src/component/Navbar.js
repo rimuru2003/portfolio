@@ -2,10 +2,44 @@ import React, { useEffect, useState } from "react";
 import "../css/Navbar.css";
 
 const Navbar = () => {
+  const [text, setText] = useState("");
+  const [i, setI] = useState(0);
+  const txt = "Aryan";
+  const speed = 100;
+
+  const [listItems, setListItems] = useState([""]);
+  const listTxt = ["Home", "About", "Service", "Project", "Stack", "Resume"];
+
   const [scrollData, setScrollData] = useState({
     y: 0,
     lastY: 0,
   });
+
+  useEffect(() => {
+    const typeWriter = () => {
+      if (i < txt.length) {
+        setText((prevText) => prevText + txt.charAt(i));
+        setI((prevI) => prevI + 1);
+      }
+    };
+
+    if (i < txt.length) {
+      const timer = setTimeout(typeWriter, speed);
+      return () => clearTimeout(timer);
+    }
+  }, [i, txt]);
+
+  useEffect(() => {
+    listTxt.forEach((item, index) => {
+      setTimeout(() => {
+        setListItems((prevListItems) => {
+          const newListItems = [...prevListItems];
+          newListItems[index] = item;
+          return newListItems;
+        });
+      }, index * 200);
+    });
+  }, [listTxt]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,14 +68,11 @@ const Navbar = () => {
 
   return (
     <div id="header" className="n1">
-      <h1 className="n2">Aryan</h1>
+      <h1 className="n2">{text}</h1>
       <ul className="n3">
-        <li>Home</li>
-        <li>About</li>
-        <li>Service</li>
-        <li>Project</li>
-        <li>Stack</li>
-        <li>Resume</li>
+        {listItems.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
       </ul>
     </div>
   );
