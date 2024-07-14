@@ -27,7 +27,7 @@
   align-items:center;
   gap:0px 12px;
   transition: 0.4s ease;
-  filter:drop-shadow(2px 2px 2px rgba(0,0,0,0.6));
+  box-shadow: 0 0 5px #8CAEB7, 0 0 25px #8CAEB7;
 
 
 }
@@ -35,15 +35,20 @@
 
 .ho8:hover{
   background:#155A6E;
-  filter:drop-shadow(5px 5px 5px rgba(0,0,0,0.6));
+ box-shadow: 0 0 5px teal,0 0 25px teal ,0 0 50px teal,0 0 100px teal,0 0 200px teal;
   cursor:pointer;
   height:3.2rem;
   width:9.5rem;
+  overflow:hidden;
+}
+.size-6 {
+  height: 1.5rem;
+  transition: transform 90s forwards ;
 
 }
-.size-6{
-  height:1.5rem;
 
+.ho8:hover .size-6 {
+  transform: translateX(170%);
 }
 
 

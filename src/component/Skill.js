@@ -24,6 +24,19 @@ const Skill = () => {
           <i className="devicon-tailwindcss-original colored icon"></i>
           <i className="devicon-netlify-plain colored icon"></i>
           <i className="devicon-css3-plain colored icon"></i>
+          <i class="devicon-nodejs-plain-wordmark colored"></i>
+
+          <i class="devicon-git-plain"></i>
+          
+          
+         
+          <i class="devicon-c-line"></i>
+          
+          
+          
+          <i class="devicon-reactrouter-plain"></i>
+
+          <i class="devicon-express-original"></i>
         </div>
       </div>
     </>
