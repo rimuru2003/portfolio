@@ -9,16 +9,16 @@ const Project = () => {
     <div className="p1">
      
       <div className="p">
-        <div className="front-face">Front</div>
-        <div className="back-face">Back</div>
+        <div className="front-face"></div>
+        <div className="back-face"></div>
       </div>
       <div className="p">
-        <div className="front-face">Front</div>
-        <div className="back-face">Back</div>
+        <div className="front-face"></div>
+        <div className="back-face"></div>
       </div>
       <div className="p">
-        <div className="front-face">Front</div>
-        <div className="back-face">Back</div>
+        <div className="front-face"></div>
+        <div className="back-face"></div>
       </div>
       
       
