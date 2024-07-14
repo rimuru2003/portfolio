@@ -5,7 +5,9 @@ import { cleanup } from "@testing-library/react";
 const About = () => {
   
   const txts = {
-   about: "xewifn llllllllllllllllllllllllllllllfhxqlnowixeeeeeeeeeeee xewifn llllllllllllllllllllllllllllllfhxqlnowixeeeeeeeeeeifnllllllllllllllllllllllllllllllfhxqlnowixeeeeeeeeeeeexewifn llllllllllllllllllllllllllllllfhxqlnowixeeeeeeeeeeeexewifn llllllllllllllllllllllllllllllfhxqlnowixeeeeeeeeeeeexewifn llllllllllllllllllllllllllllllfhxqlnowixeeeeeeeeeeeexewifn llllllllllllllllllllllllllllllfhxqlnowixeeeeeeeeeeeexewifn llllllllllllllllllllllllllllllfhxqlnowixeeeeeeeeeeeexewifn llllllllllllllllllllllllllllllfhxqlnowixeeeeeeeeeeeexewifn llllllllllllllllllllllllllllllfhxqlnowixeeeeeeeeeeeexewifn llllllllllllllllllllllllllllllfhxqlnowixeeeeeeeeeeeexewifn llllllllllllllllllllllllllllllfhxqlnowixeeeeeeeeeeeexewifn llllllllllllllllllllllllllllllfhxqlnowixeeeeeeeeeeeexewifn llllllllllllllllllllllllllllllfhxqlnowixeeeeeeeeeeeexewifn llllllllllllllllllllllllllllllfhxqlnowixeeeeeeeeeeeexewifn llllllllllllllllllllllllllllllfhxqlnowixeeeeeeeeeeee"
+   about: "II am a passionate and dedicated front-end web developer with a strong focus on crafting responsive, user-friendly websites. During my recent internship at Codesoft, I honed my expertise in HTML, CSS, JavaScript, and modern front-end frameworks. My skill set extends beyond the front end, as I also have a foundational understanding of backend technologies and databases, allowing me to develop seamless and efficient web applications.I thrive in collaborative environments, bringing creativity, enthusiasm, and a problem-solving mindset to every project. I am always eager to learn and adapt, staying current with the latest industry trends and best practices. My goal is to join a dynamic team where I can contribute to cutting-edge web solutions, leverage my diverse skill set, and continue to grow as a developer."
+
+
   }
   return (
     <>

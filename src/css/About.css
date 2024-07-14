@@ -13,7 +13,7 @@
 .a4
 {
     height:5rem;
-    padding: 1rem 0rem 0rem 6rem; 
+    padding: 4rem 0rem 0rem 6rem; 
     color:white;
     /* background-color:black; */
 }
@@ -27,4 +27,5 @@
     height:auto;
     width:37rem;
     font-size: 1rem;
+    text-align:center;
 }

@@ -20,7 +20,7 @@
   height: 500px;
   width: 400px;
   /* background-color: rgb(216, 237, 212); */
-  border-radius: 10px;
+  border-radius: 20px;
   border: 2px solid black;
   /* position: relative; */
   text-align: center;
@@ -34,9 +34,11 @@
   position: absolute;
  
  top: -81px;
-  width: 2rem;
+  width: 5rem;
   height: 60rem;
-  background: white;
+ 
+background: #155A6E;;
+background: radial-gradient(at center top, #8CB6C2, #155A6E);
   animation: rotate 9s linear infinite;
   
 }
