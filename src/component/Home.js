@@ -21,7 +21,7 @@ const Home = () => {
 
   const name = "Hello, I'm Aryan Singh";
   const work = {
-    work: "Frontend Developer",
+    work: "Frontend Developer,",
     desc: "I love crafting solid and scalable front-end products with great user experiences. Skilled in HTML, CSS, and JavaScript, I thrive on creating intuitive and visually appealing websites. My goal is to build seamless and engaging web applications that delight users.",
   };
   const speed = 50;

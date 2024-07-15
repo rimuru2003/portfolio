@@ -43,7 +43,7 @@ const Contact = () => {
             className="co8"
             name="email"
             value={con.email}
-            placeholder="Email"
+            placeholder="Email:"
             onChange={settingcon}
           />
           <input
@@ -61,7 +61,7 @@ const Contact = () => {
             className="co10 custom-scrollbar"
             name="text"
             value={con.text}
-            placeholder="your msg:"
+            placeholder="Your Msg:"
             onChange={settingcon}
             id="desc"
             cols="30"

@@ -15,12 +15,16 @@
 {
     height:5rem;
     padding: 4rem 0rem 0rem 6rem; 
-    color:white;
+    color:#d4d4d4;
     /* background-color:black; */
 }
 .a7{
     padding:10px 0px 0px 300px;
     font-size: 2.8rem;
+    font-family: "Merienda", cursive;
+  font-optical-sizing: auto;
+  font-weight:900;
+  font-style: normal;
 }
 .a6{
     padding:0px 0px 0px 100px;
@@ -29,5 +33,9 @@
     width:37rem;
     font-size: 1rem;
     text-align:start;
+    font-family: "Inter Tight", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
    
 }

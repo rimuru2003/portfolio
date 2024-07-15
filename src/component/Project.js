@@ -7,7 +7,8 @@ import Project3 from "../pic/Project3.png";
 const Project = () => {
   return (
     <>
-      <h1 className="head">A small selection of recent projects</h1>
+      <h1 className="head">A small selection </h1>
+      <h1 className="heads">of recent projects</h1>
       <div className="p1">
         <div className="p">
           <div className="front-face">
