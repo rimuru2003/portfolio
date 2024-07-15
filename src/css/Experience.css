@@ -27,6 +27,8 @@
     filter:drop-shadow(5px 5px 5px rgba(0,0,0,0.6));
     position: relative; 
     overflow:hidden;
+    background: #155A6E;
+
   
   }
   
@@ -34,7 +36,7 @@
     content: "";
     position: absolute;
     top: 16px;
-    
+    right: -236px;
     width: 71rem;
     height: 6rem;
    

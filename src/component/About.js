@@ -12,7 +12,7 @@ const About = () => {
   return (
     <>
       <div className="a1">
-       <img src={Aboutimg}/>
+       <img className="a2" src={Aboutimg}/>
 
         <div className="a4">
           <h1 className="a7">About Me</h1>
