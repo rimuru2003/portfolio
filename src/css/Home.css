@@ -35,6 +35,7 @@
 
 .ho8:hover{
   background:#155A6E;
+  color:white;
  box-shadow: 0 0 5px teal,0 0 25px teal ,0 0 50px teal,0 0 100px teal,0 0 200px teal;
   cursor:pointer;
   height:3.2rem;
@@ -43,13 +44,11 @@
 }
 .size-6 {
   height: 1.5rem;
-  transition: transform 90s forwards ;
+  /* transition: transform 90s forwards ; */
 
 }
 
-.ho8:hover .size-6 {
-  transform: translateX(170%);
-}
+
 
 
 
