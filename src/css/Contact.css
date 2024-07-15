@@ -55,13 +55,20 @@
     margin: 1.3rem 0 0 12.5rem;
     position:absolute;
     z-index:3;
+    font-family: "Merienda", cursive;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
 }
 .co5{
     margin: 7rem 0 0 4.3rem;
     position:absolute;
     z-index:3;
-    
-        width:28rem;
+   width:28rem;
+   font-family: "Inter Tight", sans-serif;
+   font-optical-sizing: auto;
+   font-weight: 600;
+   font-style: normal;
 
 }
 .co6{
@@ -83,6 +90,7 @@
     text-align: start; 
     position:absolute;
     z-index:3; 
+    font-size: large
     
 }
 
@@ -94,6 +102,7 @@
     border-radius: 5px;
     position:absolute;
     z-index:3;
+    font-size: large
 
 }
 .co9{
@@ -104,6 +113,7 @@
     border-radius: 5px; 
     position:absolute;
     z-index:3;   
+    font-size: large
 
 }
 .co10{
@@ -115,9 +125,8 @@
     resize: none;  
     position:absolute;
     z-index:3;
-    
-
-}
+    border-width: 2px;
+    font-size: large}
 .co11{
     position:absolute;
     z-index:3;
@@ -140,7 +149,7 @@
 .co11:hover{
     background:#155A6E;
     color:white;
-   box-shadow: 0 0 5px teal,0 0 25px teal ,0 0 50px teal;
+    box-shadow: 0 0 5px teal, 0 0 25px teal, 0 0 50px teal, 0 0 100px teal;
     cursor:pointer;
     height:3.2rem;
     width:9.5rem;
