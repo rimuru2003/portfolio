@@ -3,69 +3,52 @@
   padding: 50px;
   /* height: 75%; */
   display: flex;
-
-
 }
-.ho2{
+.ho2 {
   margin: -37px 0px 0 -35px;
 }
-.ho3{
+.ho3 {
   font-size: 2.3rem;
 }
-.ho4{
+.ho4 {
   font-size: 1.5rem;
 }
-
-.ho8{
-  height:3rem;
-  width:9rem;
+.toggle {
+  height: 3rem;
+  width: 9rem;
   border-radius: 15px;
-  font-size:22px;
- background:#90B0B9;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:0px 12px;
+  font-size: 22px;
+  background: #90b0b9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0px 12px;
   transition: 0.4s ease;
-  box-shadow: 0 0 5px #8CAEB7, 0 0 25px #8CAEB7;
-
-
+  box-shadow: 0 0 5px #8caeb7, 0 0 25px #8caeb7;
 }
-
-
-.ho8:hover{
-  background:#155A6E;
-  color:white;
- box-shadow: 0 0 5px teal,0 0 25px teal ,0 0 50px teal,0 0 100px teal,0 0 200px teal;
-  cursor:pointer;
-  height:3.2rem;
-  width:9.5rem;
-  overflow:hidden;
+.toggle:hover {
+  background: #155a6e;
+  color: white;
+  box-shadow: 0 0 5px teal, 0 0 25px teal, 0 0 50px teal, 0 0 100px teal, 0 0 200px teal;
+  cursor: pointer;
+  height: 3.2rem;
+  width: 9.5rem;
+  overflow: hidden;
 }
 .size-6 {
   height: 1.5rem;
   /* transition: transform 90s forwards ; */
-
 }
-
-
-
-
-
-
 .ho5 {
   width: 70%;
   font-size: 1.1rem;
 }
-
 .ho6 {
   object-fit: cover;
   /* padding-top:5px; */
   margin: -80px -40px 0 100px;
 }
-
 .ho7 {
-
   /* background-size: cover; */
   background-position: center center;
   height: 25rem;
@@ -75,7 +58,6 @@
   animation: animate 8s ease-in-out infinite;
   transition: all 1s ease-in-out;
 }
-
 @keyframes animate {
   0%, 100% {
     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
@@ -83,4 +65,35 @@
   50% {
     border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
   }
+}
+.menu li {
+  position: absolute;
+  left: 130px;
+  list-style: none;
+  transition: 0.5s;
+  transform: rotate(calc(-180deg/5 * var(--i)));
+  transform-origin: 120px;
+  scale: 0;
+  transition-delay: calc(0.5s * var(--i));
+}
+.menu.active li {
+  scale: 1;
+}
+.menu li a {
+  position: relative;
+  display: flex;
+  transform: rotate(calc(-180deg/-5 * var(--i)));
+  height:3rem;
+  width:3rem;
+color:var(--clo);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:2.2rem;
+    transition:0.5s;
+}
+
+.menu li:hover a{
+  font-size:3;
+/* box-shadow: 0 0 0 2px var(--clo),0 0 0 6px #fff; */
 }
