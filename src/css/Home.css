@@ -30,20 +30,28 @@
   font-size: x-large;
   border-radius: 15px;
   font-size: 22px;
-  background: #90b0b9;
+  border: solid 3px;
+    background: #90b0b9;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0px 12px;
+  gap: 0px 5px;
   transition: 0.4s ease;
   box-shadow: 0 0 5px #8caeb7, 0 0 25px #8caeb7;
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100,
+    "YTLC" 500;
 }
 .toggle:hover {
   background: #155a6e;
   
 
   color: white;
-  box-shadow: 0 0 5px teal, 0 0 25px teal, 0 0 50px teal, 0 0 100px teal, 0 0 200px teal;
+  box-shadow: 0 0 5px teal, 0 0 25px teal, 0 0 50px teal;
   cursor: pointer;
   height: 3.2rem;
   width: 9.5rem;
@@ -53,15 +61,18 @@
   height: 1.8rem;
   /* transition: transform 90s forwards ; */
   position: absolute; /* Add this line */
-  left: 15.9rem; /* Adjust the position as needed */
+  left: 16.2rem; /* Adjust the position as needed */
 }
 .ho5 {
   width: 70%;
   font-size: 1.1rem;
-  font-family: "Inter Tight", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 600;
-    font-style: normal;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100,
+    "YTLC" 500;
 }
 .ho6 {
   object-fit: cover;

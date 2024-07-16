@@ -1,3 +1,9 @@
+/* Hide the default scrollbar */
+::-webkit-scrollbar {
+  width: 0;
+  background-color: transparent;
+}
+
 body {
   margin: 50px;
   /* background-color: rgb(225, 229, 232); */
