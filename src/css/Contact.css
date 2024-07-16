@@ -52,24 +52,29 @@
   
   
 .co4{
-    margin: 1.3rem 0 0 12.5rem;
+    margin: 2rem 0 0 12.5rem;
     position:absolute;
     z-index:3;
     font-family: "Merienda", cursive;
   font-optical-sizing: auto;
   font-weight: 900;
   font-style: normal;
+  filter:drop-shadow(5px 5px 5px rgba(0,0,0,0.6));
+
 }
 .co5{
     margin: 7rem 0 0 4.3rem;
     position:absolute;
     z-index:3;
    width:28rem;
-   font-family: "Inter Tight", sans-serif;
+   
+   font-family: "Nunito Sans", sans-serif;
    font-optical-sizing: auto;
-   font-weight: 600;
+   font-weight: 700;
    font-style: normal;
-
+   font-variation-settings:
+     "wdth" 100,
+     "YTLC" 500;
 }
 .co6{
    top:180px;
@@ -90,7 +95,14 @@
     text-align: start; 
     position:absolute;
     z-index:3; 
-    font-size: large
+    font-size: large;
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100,
+      "YTLC" 500;
     
 }
 
@@ -102,7 +114,14 @@
     border-radius: 5px;
     position:absolute;
     z-index:3;
-    font-size: large
+    font-size: large;
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100,
+      "YTLC" 500;
 
 }
 .co9{
@@ -113,7 +132,15 @@
     border-radius: 5px; 
     position:absolute;
     z-index:3;   
-    font-size: large
+    font-size: large;
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100,
+      "YTLC" 500;
+
 
 }
 .co10{
@@ -126,7 +153,15 @@
     position:absolute;
     z-index:3;
     border-width: 2px;
-    font-size: large}
+    font-size: large;
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100,
+      "YTLC" 500;
+  }
 .co11{
     position:absolute;
     z-index:3;
@@ -138,18 +173,26 @@
     align-items:center;
     gap:0px 12px;
     mix-blend-mode: screen;
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100,
+      "YTLC" 500;
+
 
     border-radius: 15px;
-    font-size:22px;
+    font-size:27px;
     top:85%;
     left:37%;
     transition: 0.4s ease;
-  box-shadow: 0 0 5px #8CAEB7, 0 0 25px #8CAEB7;
+  /* box-shadow: 0 0 5px #8CAEB7, 0 0 25px #8CAEB7; */
 }
 .co11:hover{
     background:#155A6E;
     color:white;
-    box-shadow: 0 0 5px teal, 0 0 25px teal, 0 0 50px teal, 0 0 100px teal;
+    box-shadow: 0 0 5px teal, 0 0 25px teal, 0 0 50px teal;
     cursor:pointer;
     height:3.2rem;
     width:9.5rem;

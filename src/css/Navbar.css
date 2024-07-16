@@ -17,7 +17,7 @@ body, html {
   position: sticky;
   top: 0; 
   backdrop-filter: blur(10px);
-  transition:   transform 0.5s ease-in-out;
+  transition:   transform 0.4s ease-in-out;
 }
 
 
@@ -49,7 +49,7 @@ body, html {
   white-space:nowrap;
   animation:
   typing  2s ,
-  cursor 0.4s step-end infinite alternate ,
+  cursor 0.3s step-end infinite alternate ,
 
 }
 
@@ -79,6 +79,6 @@ body, html {
 .n3 li:hover {
   cursor: pointer;
 
-  font-size: 23px; 
+  /* font-size: 23px;  */
 }
 

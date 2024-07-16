@@ -11,8 +11,10 @@
     font-family: "Merienda", cursive;
   font-optical-sizing: auto;
   /* color:#2d3748; */
-  font-weight: 900;
+  font-weight: 800;
   font-style: normal;
+  filter:drop-shadow(5px 5px 5px rgba(0,0,0,0.6));
+
   }
   
   .eo2 {
@@ -70,7 +72,3 @@ background: radial-gradient(at center top, #8CB6C2, #155A6E);
     }
   }
   
- .w:hover{
-    height: 132px;
-    width:620px;
- }
