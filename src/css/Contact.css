@@ -12,7 +12,7 @@
 }
 .imgc{
     filter:drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
-    mix-blend-mode: multiply;
+    mix-blend-mode: multiply;  
 }
 
 

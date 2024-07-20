@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../css/Contact.css";
-import Conimg from "../pic/contact.svg";
+// import Conimg from "../pic/contact.svg";
 import { AiOutlineSend } from "react-icons/ai";
+import { useSelector } from "react-redux";
 
 const Contact = () => {
   const [con, setCon] = useState({
@@ -9,6 +10,17 @@ const Contact = () => {
     email: "",
     subject: "",
     text: "",
+  });
+  const [cont, setCont] = useState(null);
+
+  const [cons, setCons] = useState(null);
+  const items = useSelector((state) => state.counter.items);
+  const  contabout = items.info?.find((item) => item.contactMe)?.contactMe || "";
+
+  const imga = items.img?.find((item) => item.contact)?.contact || "";
+  useEffect(() => {
+    setCons(contabout);
+    setCont(imga);
   });
 
   const settingcon = (e) => {
@@ -19,14 +31,12 @@ const Contact = () => {
   return (
     <div className="co1">
       <div className="co2">
-        <img className="imgc" src={Conimg} />
+        <img className="imgc" src={cont} />
       </div>
       <div className="co3">
         <h1 className="co4">Contact Me</h1>
-        <p className="co5">
-          I’m thrilled you’re here! Whether you have questions, project ideas,
-          or just want to chat, reach out. I’m excited for new opportunities!
-        </p>
+
+        <p className="co5">{cons}</p>
         <form className="co6">
           <input
             autoComplete="off"
