@@ -12,14 +12,14 @@ const Project = () => {
   // Function to scroll the container to the left
   const scrollLeft = () => {
     if (scrollRef.current) {
-      scrollRef.current.scrollLeft -= 400; // Scroll left by 4000 pixels
+      scrollRef.current.scrollLeft -= 470; // Scroll left by 4000 pixels
     }
   };
 
   // Function to scroll the container to the right  
   const scrollRight = () => {
     if (scrollRef.current) {
-      scrollRef.current.scrollLeft += 400; // Scroll right by 400 pixels
+      scrollRef.current.scrollLeft += 450; // Scroll right by 400 pixels
     }
   };
 
@@ -27,6 +27,7 @@ const Project = () => {
     <>
       <h1 className="head">A small selection</h1>
       <h1 className="heads">of recent projects</h1>
+        {/* <div className="sidebarleft"></div> */}
       <div className="projects-container" ref={scrollRef}>
         <div className="project">
           <div className="hide">
@@ -81,6 +82,7 @@ const Project = () => {
           </div>
         </div>
       </div>
+      {/* <div className="sidebarright"></div> */}
       <button id="prev" onClick={scrollLeft}>
         <MdOutlineKeyboardDoubleArrowLeft />
       </button>

@@ -14,30 +14,32 @@
   color: #d4d4d4;
   font-optical-sizing: auto;
   font-weight: 900;
+
   font-style: normal;
   font-size: 2.8rem;
   filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.6));
 }
 
 .projects-container {
-  display: flex;
-  justify-content: flex-start;
-  overflow-x: auto;
-  width: 1200px; /* Width to show exactly 3 items */
-  margin: -39px 0 0 50px;
-  align-content: center;
-  gap: 50px;
-  /* background:black; */
-  padding: 100px;
-  scroll-behavior: smooth;
-  /* margin:0 50px 0 0; */
+    display: flex;
+    justify-content: flex-start;
+    overflow-x: auto;
+    width: 1150px; /* Width to show exactly 3 items */
+    margin: -39px 0 0 90px;
+    align-content: center;
+    gap: 50px;
+    /* background:black; */
+    padding: 100px;
+    scroll-behavior: smooth;
+    /* margin:0 50px 0 0; */
 }
 
 .project {
   flex: 0 0 400px; /* Fixed width for each project item */
   position: relative;
   height: 500px;
-  left:-40px;
+  /* left:-60px; */
+  right:80px;
   background: #155a6e;
   border-radius: 20px;
   text-align: center;
@@ -127,6 +129,7 @@
   border-radius: 20px;
   top: 4px;
   left: 4px;
+  
 }
 
 #next {
@@ -139,6 +142,8 @@
   cursor: pointer;
   right: 39rem;
   transition: transform 2s ease-in-out;
+  scroll-behavior: smooth;
+color:white;
 }
 
 #prev {
@@ -151,4 +156,7 @@
   cursor: pointer;
   left: 45rem;
   transition: transform 2s ease-in-out;
+  scroll-behavior: smooth;
+  color:white;
+
 }
