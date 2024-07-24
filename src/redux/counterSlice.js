@@ -14,7 +14,7 @@ export const fetchdata = createAsyncThunk("datafirebase/fetchData", async () => 
   if (docSnap.exists()) {
     return docSnap.data();
   } else {
-    throw new Error("No such document!");
+    throw new Error("No such document found!");
   }
 });
 
