@@ -1,45 +1,101 @@
-.a1{
-    height:600px;
-    /* background-color: brown;  */
-    display:flex;   
-    
-
-}
-.a2{
-   filter:drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
-        margin: 6rem 4rem 0 2rem;
-        /* mix-blend-mode: multiply;     */
-    }
+.a1 {
+    height: 600px;
+    display: flex;
+  }
   
-.a4
-{
-    height:5rem;
-    padding: 4rem 0rem 0rem 6rem; 
-    color:#d4d4d4;
-    /* background-color:black; */
-}
-.a7{
-    padding:0px 0px 0px 330px;
+  .a2 {
+    filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.6));
+    margin: 6rem 4rem 0 2rem;
+  }
+  
+  .a4 {
+    height: 5rem;
+    padding: 4rem 0 0 6rem;
+    color: #d4d4d4;
+  }
+  
+  .a7 {
+    padding: 0 0 0 330px;
     font-size: 2.8rem;
     font-family: "Merienda", cursive;
-  font-optical-sizing: auto;
-  font-weight:800;
-  font-style: normal;
-  /* filter:drop-shadow(5px 5px 5px rgba(0,0,0,0.6)); */
-
-}
-.a6{
-    padding:0px 0px 0px 145px;
-    /* background-color:red; */
-    height:auto;
-    width:37rem;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+  }
+  
+  .a6 {
+    padding: 0 0 0 145px;
+    height: auto;
+    width: 37rem;
     font-size: 1.2rem;
-    text-align:start;
+    text-align: start;
     font-family: "Nunito Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
-    font-variation-settings:
-      "wdth" 100,
-      "YTLC" 500;
-}
+    font-variation-settings: "wdth" 100, "YTLC" 500;
+  }
+  
+  @media (max-width: 992px) {
+    .a1 {
+      /* flex-direction: column; */
+      align-items: center;
+      height: auto;
+    }
+  
+    .a2 {
+      margin: 0 -3rem -129px -2rem;
+                    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.4));
+      height:25rem;
+    }
+  
+    .a4 {
+      height: auto;
+      padding: 2rem 0 0 3rem;
+      text-align: center;
+    }
+  
+    .a7 {
+      padding: 0;
+      font-size: 2.5rem;
+      text-align: center;
+    }
+  
+    .a6 {
+      padding: 0 0 0 32px;
+      width: 90%;
+      font-size: 0.8rem;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .a1 {
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+    }
+  
+    .a2 {
+      margin: 3rem 1rem 0 0.5rem;
+      filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.3));
+    }
+  
+    .a4 {
+      height: auto;
+      padding: 1rem 0 0 1rem;
+      text-align: center;
+    }
+  
+    .a7 {
+      padding: 0;
+      font-size: 2rem;
+      text-align: center;
+    }
+  
+    .a6 {
+      padding: 0 0.5rem;
+      width: 95%;
+      font-size: 1rem;
+    }
+  }
+  
