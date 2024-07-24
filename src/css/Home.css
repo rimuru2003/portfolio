@@ -1,86 +1,75 @@
 .ho1 {
   margin: 130px 125px;
   padding: 50px;
-  /* height: 75%; */
   display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: space-evenly;
+
 }
+
 .ho2 {
-  margin: -37px 0px 0 -35px;
+  margin-top: -40px;
 }
+
+.ho4, .ho5 {
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-family: "Nunito Sans", sans-serif;
+  font-variation-settings: "wdth" 100, "YTLC" 500;
+}
+
 .ho3 {
   font-size: 2.3rem;
   font-family: "Playwrite AU TAS", cursive;
   font-optical-sizing: auto;
-  font-weight: <weight>;
+  font-weight:600;
   font-style: normal;
 }
+
 .ho4 {
   font-size: 1.8rem;
-  font-family: "Nunito Sans", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 700;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100,
-    "YTLC" 500;
+  row-gap: 1rem;
 }
-.toggle {
-  height: 3rem;
-  width: 9rem;
-  font-size: x-large;
-  border-radius: 15px;
-  font-size: 22px;
-  border: solid 3px;
-    background: #90b0b9;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0px 5px;
-  transition: 0.4s ease;
-  box-shadow: 0 0 5px #8caeb7, 0 0 25px #8caeb7;
-  font-family: "Nunito Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100,
-    "YTLC" 500;
-}
-.toggle:hover {
-  background: #155a6e;
-  
 
-  color: white;
-  box-shadow: 0 0 5px teal, 0 0 25px teal, 0 0 50px teal;
-  cursor: pointer;
-  height: 3.2rem;
-  width: 9.5rem;
-  overflow: hidden;
-}
-.size-6 {
-  height: 1.8rem;
-  /* transition: transform 90s forwards ; */
-  position: absolute; /* Add this line */
-  left: 16.2rem; /* Adjust the position as needed */
-}
 .ho5 {
   width: 70%;
   font-size: 1.1rem;
-  font-family: "Nunito Sans", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 700;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100,
-    "YTLC" 500;
 }
+
+.toggle {
+  height: 3rem;
+  width: 9rem;
+  font-size: 22px;
+  border-radius: 15px;
+  border: solid 3px;
+  background: #90b0b9;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  transition: 0.4s ease;
+  box-shadow: 0 0 5px #8caeb7, 0 0 25px #8caeb7;
+}
+
+.toggle:hover {
+  background: #155a6e;
+  color: white;
+  cursor: pointer;
+}
+
+.size-6 {
+  height: 1.8rem;
+  position: absolute;
+  left: 18.2rem;
+}
+
 .ho6 {
-  object-fit: cover;
-  /* padding-top:5px; */
   margin: -80px -40px 0 100px;
 }
+
 .ho7 {
-  /* background-size: cover; */
   background-position: center center;
   height: 25rem;
   width: 25rem;
@@ -89,6 +78,7 @@
   animation: animate 8s ease-in-out infinite;
   transition: all 1s ease-in-out;
 }
+
 @keyframes animate {
   0%, 100% {
     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
@@ -97,6 +87,7 @@
     border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
   }
 }
+
 .menu li {
   position: absolute;
   left: 130px;
@@ -107,24 +98,109 @@
   scale: 0;
   transition-delay: calc(0.5s * var(--i));
 }
+
 .menu.active li {
   scale: 1;
 }
+
 .menu li a {
-  position: relative;
   display: flex;
-  transform: rotate(calc(-180deg/-5 * var(--i)));
-  height:3rem;
-  width:3rem;
-color:var(--clo);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size:2.2rem;
-    transition:0.5s;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  width: 3rem;
+  font-size: 2.2rem;
+  color: var(--clo);
+  transition: 0.5s;
 }
 
-.menu li:hover a{
-  font-size:3;
-/* box-shadow: 0 0 0 2px var(--clo),0 0 0 6px #fff; */
+.menu li:hover a {
+  font-size: 3rem;
+}
+
+@media (max-width: 992px) {
+  .ho1 {
+    margin: 100px 30px;
+
+    padding: 24px;
+    /* flex-direction: column; */
+    width: 90%;
+  }
+
+  .ho3 {
+    font-size: 1.5rem;
+  }
+  .ho2 {
+    padding: 0 -50px 0 0;
+    width:50%;  
+  }
+  .ho4 {
+    font-size: 1.3rem;
+  }
+
+  .ho5 {
+    width:85%;
+    font-size: 0.8rem;
+  }
+
+  .toggle {
+    width: 7rem;
+    height: 2.5rem;
+    font-size: 20px;
+    justify-content: space-evenly;
+
+  }
+
+  .size-6 {
+    left: 9.5rem;
+    height: 1.5rem;
+
+  }
+
+  .ho6 {
+    margin: -50px -8px 0 61px;
+    }
+
+  .ho7 {
+    height: 20rem;
+    width: 20rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .ho1 {
+    margin: 50px 20px;
+    padding: 20px;
+  }
+
+  .ho3 {
+    font-size: 1.5rem;
+  }
+
+  .ho4 {
+    font-size: 1.2rem;
+  }
+
+  .ho5 {
+    font-size: 0.9rem;
+  }
+
+  .toggle {
+    width: 6rem;
+    height: 2rem;
+    font-size: 18px;
+  }
+
+  .size-6 {
+    left: 10rem;
+  }
+
+  .ho6 {
+    margin: -30px -10px 0 30px;
+  }
+
+  .ho7 {
+    height: 15rem;
+    width: 15rem;
+  }
 }
