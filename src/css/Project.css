@@ -5,7 +5,7 @@
   font-weight: 900;
   font-style: normal;
   font-size: 2.8rem;
-  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.6));
+  /* filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.6)); */
 }
 
 .heads {
@@ -17,7 +17,7 @@
 
   font-style: normal;
   font-size: 2.8rem;
-  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.6));
+  /* filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.6)); */
 }
 
 .projects-container {
