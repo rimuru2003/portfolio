@@ -1,50 +1,39 @@
-.head {
-  margin: 100px 0 -10px 338px;
-  font-family: "Merienda", cursive;
-  font-optical-sizing: auto;
-  font-weight: 900;
-  font-style: normal;
-  font-size: 2.8rem;
-  /* filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.6)); */
-}
+/* Base styles */
+
 
 .heads {
-  margin: -66px 0 -10px 739px;
+  margin: -66px 0 -10px 580px;
   font-family: "Merienda", cursive;
-  color: #d4d4d4;
+  /* color: #d4d4d4; */
   font-optical-sizing: auto;
   font-weight: 900;
-
   font-style: normal;
   font-size: 2.8rem;
-  /* filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.6)); */
 }
 
 .projects-container {
-    display: flex;
-    justify-content: flex-start;
-    overflow-x: auto;
-    width: 1150px; /* Width to show exactly 3 items */
-    margin: -39px 0 0 90px;
-    align-content: center;
-    gap: 50px;
-    /* background:black; */
-    padding: 100px;
-    scroll-behavior: smooth;
-    /* margin:0 50px 0 0; */
+  display: flex;
+  justify-content: flex-start;
+  overflow-x: auto;
+  width: 1150px; /* Width to show exactly 3 items */
+  margin: -39px 0 0 70px;
+  align-content: center;
+  gap: 50px;
+  padding: 100px;
+  scroll-behavior: smooth;
 }
 
 .project {
-  flex: 0 0 400px; /* Fixed width for each project item */
+  flex: 0 0 400px; 
   position: relative;
   height: 500px;
-  /* left:-60px; */
-  right:80px;
+  right: 80px;
   background: #155a6e;
   border-radius: 20px;
   text-align: center;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  filter:drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
+
 }
 
 .project::before {
@@ -55,7 +44,6 @@
   height: 60rem;
   background: radial-gradient(at center top, #8cb6c2, #155a6e);
   animation: rotates 9s linear infinite;
-  animation-timing-function: ease-in-out;
 }
 
 @keyframes rotates {
@@ -93,8 +81,6 @@
 .front-face {
   z-index: 2;
   object-fit: cover;
-  height: 100%;
-  width: 100%;
   border-radius: 20px;
   position: absolute;
   top: -2px;
@@ -129,34 +115,103 @@
   border-radius: 20px;
   top: 4px;
   left: 4px;
-  
 }
 
-#next {
+#next,
+#prev {
   position: absolute;
   height: 2rem;
-  margin: -5rem 5rem 0 0;
   background-color: transparent;
   border: none;
   font-size: 2.4rem;
   cursor: pointer;
+  color: white;
+}
+
+#next {
+  margin: -5rem 5rem 0 0;
   right: 39rem;
   transition: transform 2s ease-in-out;
-  scroll-behavior: smooth;
-color:white;
 }
 
 #prev {
   margin: -5rem 5rem 0 0;
-  position: absolute;
-  height: 2rem;
-  background-color: transparent;
-  border: none;
-  font-size: 2.4rem;
-  cursor: pointer;
   left: 45rem;
   transition: transform 2s ease-in-out;
-  scroll-behavior: smooth;
-  color:white;
+}
 
+/* Responsive Styles for 992px */
+@media (max-width: 992px) {
+
+
+  .heads {
+    margin: -46px 0 -10px 235px;
+    font-size: 2.2rem;
+  }
+
+  .projects-container {
+    width: 550px;
+    height:450px;
+    margin: -20px 0 0 35px;
+    gap: 20px;
+    padding: 50px 0 0 100px;
+  }
+
+  .project {
+    flex: 0 0 300px;
+    height: 420px;
+    filter:drop-shadow(4px 4px 4px rgba(0,0,0,0.6));
+
+  }
+
+  #next,
+  #prev {
+    font-size: 1.8rem;
+    margin: -0.5rem 1rem 0 0;
+    
+  }
+
+  #next {
+    right: 20rem;
+    
+  }
+
+  #prev {
+    left: 22rem;
+  }
+}
+
+@media (max-width: 600px) {
+
+
+  .heads {
+    margin: -26px 0 -10px 100px;
+    font-size: 1.8rem;
+  }
+
+  .projects-container {
+    width: 100%;
+    margin: -10px 0 0 10px;
+    gap: 10px;
+    padding: 30px;
+  }
+
+  .project {
+    flex: 0 0 250px;
+    height: 300px;
+  }
+
+  #next,
+  #prev {
+    font-size: 1.4rem;
+    margin: -5rem 1rem 0 0;
+  }
+
+  #next {
+    right: 10rem;
+  }
+
+  #prev {
+    left: 12rem;
+  }
 }

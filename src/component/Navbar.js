@@ -8,7 +8,14 @@ const Navbar = () => {
   const speed = 100;
 
   const [listItems, setListItems] = useState([""]);
-  const listTxt = ["Home", "About", "Service", "Project", "Stack", "Resume"];
+  const listTxt = [
+    "Home",
+    "About",
+    "Skill",
+    "Project",
+    "Experience",
+    "Contact",
+  ];
 
   const [scrollData, setScrollData] = useState({
     y: 0,
@@ -65,13 +72,21 @@ const Navbar = () => {
       }
     }
   }, [scrollData]);
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <div id="header" className="n1">
       <h1 className="n2">{text}</h1>
       <ul className="n3">
         {listItems.map((item, index) => (
-          <li key={index}>{item}</li>
+          <li key={index} onClick={() => scrollToSection(item.toLowerCase())}>
+            {item}
+          </li>
         ))}
       </ul>
     </div>

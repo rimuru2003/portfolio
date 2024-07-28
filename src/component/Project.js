@@ -32,8 +32,8 @@ const Project = () => {
 
   return (
     <>
-      <h1 className="head">A small selection</h1>
-      <h1 className="heads">of recent projects</h1>
+      
+      <h1 className="heads"> Recent projects</h1>
 
       <div className="projects-container" ref={scrollRef}>
         {projects.length > 0 ? (

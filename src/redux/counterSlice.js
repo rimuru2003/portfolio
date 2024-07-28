@@ -29,7 +29,7 @@ const counterSlice = createSlice({
       })
       .addCase(fetchdata.fulfilled, (state, action) => {
         state.status = "succeeded";
-        state.items = action.payload; // Assign the array directly to state.items
+        state.items = action.payload;   
       })
       .addCase(fetchdata.rejected, (state, action) => {
         state.status = "failed";
