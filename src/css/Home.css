@@ -113,10 +113,10 @@
   color: var(--clo);
   transition: 0.5s;
 }
-
+/* 
 .menu li:hover a {
   font-size: 3rem;
-}
+} */
 
 @media (max-width: 992px) {
   .ho1 {

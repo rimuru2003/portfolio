@@ -12,14 +12,11 @@
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: normal;
-  /* filter:drop-shadow(5px 5px 5px rgba(0,0,0,0.6)); */
 
 }
 .so2 {
   width: 50%;
   font-size: 100px;
-  /* justify-content: space-evenly; */
-  /* background-color: red; */
   margin: 0 -45px 0 0;
   display: grid;
   place-items: center;
@@ -30,18 +27,13 @@ gap:10px 19px;
 .icon {
   font-size: 90px; /* adjust font size to your liking */
   margin: 10px; /* add some margin to space out the icons */
-  animation: bubble 15s linear infinite;
+  animation:  15s linear infinite;
   filter:drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
 }
 .icon:hover{
   cursor:pointer;
 }
 
-@keyframes bubble {
-  0%{
-    transform:
-  }
-}
 
 
 @media (max-width: 992px){
@@ -57,7 +49,7 @@ gap:10px 19px;
 
   .so2{
     margin: 30px -44px 0 -367px;
-        grid-template-columns: 100px 100px 100px 100px 100px 100px   ;
+        grid-template-columns: 100px 100px 100px 100px 100px 100px;
        
   }
   .skillheading{
