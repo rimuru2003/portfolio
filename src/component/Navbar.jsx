@@ -13,9 +13,10 @@ const Navbar = () => {
     "About",
     "Skill",
     "Project",
-    "Experience",
+   
     "Contact",
   ];
+// "Experience", add this above when this is available
 
   const [scrollData, setScrollData] = useState({
     y: 0,
@@ -72,6 +73,9 @@ const Navbar = () => {
       }
     }
   }, [scrollData]);
+
+
+
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
