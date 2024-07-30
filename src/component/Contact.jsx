@@ -3,6 +3,8 @@ import "../css/Contact.css";
 import emailjs from "@emailjs/browser";
 import { AiOutlineSend } from "react-icons/ai";
 import { useSelector } from "react-redux";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const Contact = () => {
   const [con, setCon] = useState({
@@ -11,14 +13,14 @@ const Contact = () => {
     subject: "",
     text: "",
   });
+  const items = useSelector((state) => state.counter.items);
   const [cont, setCont] = useState(null);
   const form = useRef();
 
   const [cons, setCons] = useState(null);
-  const items = useSelector((state) => state.counter.items);
   const contabout = items.info?.find((item) => item.contactMe)?.contactMe || "";
-
   const imga = items.img?.find((item) => item.contact)?.contact || "";
+
   useEffect(() => {
     setCons(contabout);
     setCont(imga);
@@ -28,17 +30,21 @@ const Contact = () => {
     setCon({ ...con, [e.target.name]: e.target.value });
   };
 
+ 
+
   const sendEmail = (e) => {
-    e.preventDefault();
+    e.preventDefault();                     
+
 
     emailjs
       .sendForm("service_oef3i38", "template_2uxlppp", form.current, "P5Sm3jFvsLS-rA0Ol")
       .then(
         () => {
-          console.log("SUCCESS!");
+          toast.success("Email sent successfully!");
         },
         (error) => {
-          console.log("FAILED...", error.text);
+          toast.error("Failed to send email. Please try again.");
+          console.error("FAILED...", error.text);
         }
       );
   };
@@ -50,7 +56,6 @@ const Contact = () => {
       </div>
       <div className="co3">
         <h1 className="co4">Contact Me</h1>
-
         <p className="co5">{cons}</p>
         <form className="co6" ref={form} onSubmit={sendEmail}>
           <input
@@ -64,7 +69,7 @@ const Contact = () => {
           />
           <input
             autoComplete="off"
-            type="text"
+            type="email"
             className="co8"
             name="email"
             value={con.email}
@@ -94,6 +99,7 @@ const Contact = () => {
             <AiOutlineSend className="co12" />
           </button>
         </form>
+        <ToastContainer />
       </div>
     </div>
   );
