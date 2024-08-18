@@ -1,27 +1,36 @@
 .co1 {
-  margin: 12rem 0 0;
-  height: 43rem;
+  height: 45rem;
   display: flex;
-  gap: 0 6rem;
+  justify-content: space-evenly;
+  /* align-items: center; */
+    gap: 0 6rem;
 }
 
+
+
 .co2 {
-  margin: 3rem 0 0 6.5rem;
+  margin: -2rem 0 0 2rem;
+
 }
 
 .imgc {
   filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.6));
   mix-blend-mode: multiply;
+  height:42rem;
 }
 
 .co3 {
-  margin: 1rem 0 0 2rem;
-  height: 38rem;
-  width: 35rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: -4rem 0 5rem 0;
   border-radius: 15px;
+
+
+  width: 35rem;
+  background: #155A6E;
   position: relative;
   overflow: hidden;
-  background: #155A6E;
 }
 
 .co3:hover::before {
@@ -45,35 +54,35 @@
 }
 
 .co4 {
-  margin: 2rem 0 0 12.5rem;
-  position: absolute;
-  z-index: 3;
+  padding: 25px 0 0;
   font-family: "Merienda", cursive;
   font-weight: 900;
-  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.6));
+  z-index: 2;
+  /* filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.6)); */
 }
 
 .co5 {
-  margin: 7rem 0 0 4.3rem;
-  position: absolute;
-  z-index: 3;
-  width: 28rem;
+  margin: 0.3rem 0 0 1rem;
+  text-align: center;
+  width: 23rem;
+  font-size: 1.1rem;
+  z-index: 2;
   font-family: "Nunito Sans", sans-serif;
   font-weight: 700;
   font-variation-settings: "wdth" 100, "YTLC" 500;
 }
 
 .co6 {
-  top: 180px;
-  left: 135px;
-  height: 20rem;
-  margin: 2rem 0 0;
-  color: white;
-  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  color: white;
+  z-index: 2;
+  mix-blend-mode: color-burn;
+  padding-top: 3rem;
+  height: 15rem;
+  justify-content: space-around;
 }
 
 .co7,
@@ -83,25 +92,20 @@
   width: 18rem;
   height: 2rem;
   border-radius: 5px;
-  mix-blend-mode: color-burn;
   text-align: start;
-  position: relative;
-  z-index: 3;
   font-size: large;
   font-family: "Nunito Sans", sans-serif;
   font-weight: 700;
   font-variation-settings: "wdth" 100, "YTLC" 500;
+  resize: none;
 }
 
 .co10 {
-  height: 8rem;
-  resize: none;
-  border-width: 2px;
+  min-height: 8rem;
+  border: 2px solid;
 }
 
 .co11 {
-  position: relative;
-  z-index: 3;
   height: 3rem;
   width: 9rem;
   display: flex;
@@ -116,32 +120,40 @@
   transition: 0.4s ease;
   background: transparent;
 }
+@media (max-width: 1200px) {
+  .co1 {
+   display:flex;
+    align-items: center;
+    margin: 8rem 0 0;
+    gap: 2rem;
+  }
 
-.co11:hover {
-  color: white;
-  cursor: pointer;
-  border-color: white;
-  transform: scale(1.1);
-  overflow: hidden;
+  .co3 {
+    width: 30rem;
+  }
+
+  .co4,
+  .co5 {
+    margin: 1rem 0;
+    text-align: center;
+  }
+
+  .co6 {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   .imgc {
     height: 23rem;
   }
+
   .co1 {
     align-items: center;
     height: auto;
     margin: 4rem 0 0 -4px;
+    gap: 2rem;
   }
 
   .co2 {
@@ -176,7 +188,8 @@
     height: 2.5rem;
     width: 7rem;
     font-size: 1.2rem;
-    margin: -72px 0 0 -149px;  }
+    margin: -72px 0 0 -149px;
+  }
 
   .co7,
   .co8,
@@ -197,12 +210,12 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 767px) {
   .co1 {
     flex-direction: column;
     align-items: center;
     height: auto;
-    margin: 6rem 0 0;
+    /* margin: 2rem 0 0; */
   }
 
   .co2 {
@@ -214,19 +227,46 @@
     margin: 1rem 0;
   }
 
-  .co4 {
-    margin: 1rem 0 0;
-    text-align: center;
-  }
-
+  .co4,
   .co5 {
-    margin: 3rem 0 0;
-    width: 90%;
+    margin: 0 0 0 0;
     text-align: center;
+    width: 90%;
   }
 
   .co6 {
     left: 50%;
     transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 550px) {
+  .co3 {
+    height: 20rem;
+  }
+
+  .co4,
+  .co5 {
+    margin: 0.5rem 0;
+  }
+
+  .co11 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .co3 {
+    height: 15rem;
+  }
+
+  .co4,
+  .co5 {
+    margin: 0.5rem 0;
+    font-size: 0.8rem;
+  }
+
+  .co11 {
+    font-size: 0.8rem;
   }
 }

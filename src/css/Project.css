@@ -2,31 +2,48 @@
 
 
 .heads {
-  margin: -66px 0 -10px 580px;
+  padding: 80px 0 0 0;
   font-family: "Merienda", cursive;
-  /* color: #d4d4d4; */
   font-optical-sizing: auto;
   font-weight: 900;
   font-style: normal;
-  font-size: 2.8rem;
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Ensure the text itself is centered */
+  margin: 0 auto; /* Center the .heads container */
+  
+}
+
+.projects-container-wrapper {
+  display: flex;
+  justify-content: center; 
+  align-items:center;
+  width: 100%;
+  padding:20px 0 0 0;
+
 }
 
 .projects-container {
   display: flex;
   justify-content: flex-start;
   overflow-x: auto;
-  width: 1150px; /* Width to show exactly 3 items */
-  margin: -39px 0 0 70px;
-  align-content: center;
+  width: 1150px;
+  align-items: center;
   gap: 50px;
-  padding: 100px;
+  padding: 50px 110px 30px 110px;
   scroll-behavior: smooth;
+  /* background: black; */
+  
+
 }
+
 
 .project {
   flex: 0 0 400px; 
   position: relative;
-  height: 500px;
+  height: 600px;
   right: 80px;
   background: #155a6e;
   border-radius: 20px;
@@ -119,26 +136,26 @@
 
 #next,
 #prev {
-  position: absolute;
   height: 2rem;
   background-color: transparent;
   border: none;
   font-size: 2.4rem;
   cursor: pointer;
   color: white;
+  transition: transform 2s ease-in-out;
+  margin: 0 20px; /* Add margin to space them evenly */
+  padding: 0; /* Remove padding for consistent centering */
 }
 
-#next {
-  margin: -5rem 5rem 0 0;
-  right: 39rem;
-  transition: transform 2s ease-in-out;
+.btns {
+  width: 100%; /* Full width to center the buttons within the container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:1rem 0 14.2rem 0;
 }
 
-#prev {
-  margin: -5rem 5rem 0 0;
-  left: 45rem;
-  transition: transform 2s ease-in-out;
-}
+
 
 /* Responsive Styles for 992px */
 @media (max-width: 992px) {

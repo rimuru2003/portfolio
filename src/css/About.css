@@ -1,22 +1,29 @@
 .a1 {
-    height: 600px;
-    display: flex;
+    height: 800px;
+   
+    padding-top:50px;
   }
   
   .a2 {
     filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.6));
-    margin: 6rem 4rem 0 2rem;
+    
+    height: auto; 
   }
   
   .a4 {
     height: 5rem;
-    padding: 4rem 0 0 6rem;
+    
     color: #d4d4d4;
+  }
+  .a3{
+    display: flex;
+    justify-content: space-evenly;
   }
   
   .a7 {
-    padding: 0 0 0 330px;
-    font-size: 2.8rem;
+    text-align:center;
+  
+    font-size: 3rem;
     font-family: "Merienda", cursive;
     font-optical-sizing: auto;
     font-weight: 800;
@@ -24,10 +31,10 @@
   }
   
   .a6 {
-    padding: 0 0 0 145px;
+   
     height: auto;
     width: 37rem;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     text-align: start;
     font-family: "Nunito Sans", sans-serif;
     font-optical-sizing: auto;
@@ -35,67 +42,104 @@
     font-style: normal;
     font-variation-settings: "wdth" 100, "YTLC" 500;
   }
+  @media (max-width: 1400px) {
+    .a2 {
+      height: 40rem;
+    }
+  }
   
-  @media (max-width: 992px) {
-    .a1 {
-      /* flex-direction: column; */
-      align-items: center;
-      height: auto;
+  @media (max-width: 1200px) {
+    .a7 {
+      font-size: 2.5rem;
+    }
+  
+    .a6 {
+      padding: 0 0 0 50px;
+      width: 75%;
+      font-size: 1rem;
+      text-align: start;
     }
   
     .a2 {
-      margin: 0 -3rem -129px -2rem;
-                    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.4));
-      height:25rem;
+      height: 35rem;
+    }
+  }
+  
+  @media (max-width: 991px) {
+   
+  
+    .a2 {
+      margin: -2rem -2rem -129px -2rem;
+      filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.4));
+    }
+    .a3{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
   
     .a4 {
       height: auto;
-      padding: 2rem 0 0 3rem;
-      text-align: center;
+      padding: 4rem 0 0 3rem;
     }
   
     .a7 {
-      padding: 0;
       font-size: 2.5rem;
-      text-align: center;
     }
   
     .a6 {
       padding: 0 0 0 32px;
       width: 90%;
-      font-size: 0.8rem;
+      font-size: 1rem;
+      text-align: center;
     }
   }
   
-  @media (max-width: 600px) {
-    .a1 {
-      flex-direction: column;
-      align-items: center;
-      height: auto;
-    }
+  @media (max-width: 768px) {
+ 
   
     .a2 {
-      margin: 3rem 1rem 0 0.5rem;
+      filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.3));
+      height:27rem;
+    }
+  
+    .a4 {
+      height: auto;
+      padding: 4rem 0 0 1rem;
+    }
+  
+    .a7 {
+      font-size: 2rem;
+    }
+  
+    .a6 {
+     
+      width: 85%;
+      font-size: 1rem;
+    }
+  }
+
+  
+  @media (max-width: 550px) {
+    
+  
+    .a2 {
+      /* margin: 3rem 0 0 0; */
       filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.3));
     }
   
     .a4 {
       height: auto;
-      padding: 1rem 0 0 1rem;
-      text-align: center;
+      height:10rem;
     }
   
     .a7 {
-      padding: 0;
-      font-size: 2rem;
-      text-align: center;
+      font-size: 1.8rem;
     }
   
     .a6 {
-      padding: 0 0.5rem;
-      width: 95%;
-      font-size: 1rem;
+      padding: 0 1rem;
+      width: 100%;
+      font-size: 0.9rem;
     }
   }
-  

@@ -1,37 +1,41 @@
-/* Skill.css */
 .so1 {
 
-  height: 30rem;
+  height: 50rem;
   display: grid;
   place-items: center;
-  margin: 80px 0 180px 0;
+  padding: 7rem 0 0 0;
 }
 .skillheading{
-  font-size: 2.8rem;
+  font-size: 3rem;
   font-family: "Merienda", cursive;
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: normal;
+  
+  padding: 30px 0 0 0;
 
 }
 .so2 {
   width: 50%;
-  font-size: 100px;
-  margin: 0 -45px 0 0;
+  font-size: 200px;
   display: grid;
   place-items: center;
-gap:10px 19px;
+  gap:40px 70px;
   grid-template-columns: 100px 100px 100px 100px 100px 100px   ;
 }
 
 .icon {
-  font-size: 90px; /* adjust font size to your liking */
-  margin: 10px; /* add some margin to space out the icons */
+  font-size: 130px; 
+  margin: 10px; 
   animation:  15s linear infinite;
   filter:drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
 }
+
+
 .icon:hover{
   cursor:pointer;
+  transform: translatey(5px);
+
 }
 
 

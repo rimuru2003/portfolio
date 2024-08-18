@@ -33,22 +33,28 @@ const Contact = () => {
  
 
   const sendEmail = (e) => {
-    e.preventDefault();                     
-
-
-    emailjs
-      .sendForm("service_oef3i38", "template_2uxlppp", form.current, "P5Sm3jFvsLS-rA0Ol")
-      .then(
-        () => {
-          toast.success("Email sent successfully!");
-        },
-        (error) => {
-          toast.error("Failed to send email. Please try again.");
-          console.error("FAILED...", error.text);
-        }
-      );
+    e.preventDefault();
+  
+    const { name, email, subject, text } = con;
+  
+    if (name && email && subject && text) {
+      emailjs
+        .sendForm("service_oef3i38", "template_2uxlppp", form.current, "P5Sm3jFvsLS-rA0Ol")
+        .then(
+          () => {
+            toast.success("Email sent successfully!");
+            setCon({ name: "", email: "", subject: "", text: "" }); 
+          },
+          (error) => {
+            toast.error("Failed to send email. Please try again.");
+            console.error("FAILED...", error.text);
+          }
+        );
+    } else {
+      toast.error("Please enter all details."); 
+    }
   };
-
+  
   return (
     <div className="co1">
       <div className="co2">
@@ -85,15 +91,15 @@ const Contact = () => {
             placeholder="Subject:"
             onChange={settingcon}
           />
-          <textarea
-            autoComplete="off"
-            className="co10 custom-scrollbar"
-            name="text"
-            value={con.text}
-            placeholder="Your Message:"
-            onChange={settingcon}
-            id="desc"
-          />
+            <textarea
+              autoComplete="off"
+              className="co10 custom-scrollbar"
+              name="text"
+              value={con.text}
+              placeholder="Your Message:"
+              onChange={settingcon}
+              id="desc"
+            />  
           <button type="submit" className="co11">
             Send
             <AiOutlineSend className="co12" />

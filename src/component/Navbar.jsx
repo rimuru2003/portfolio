@@ -1,27 +1,24 @@
 import React, { useEffect, useState } from "react";
 import "../css/Navbar.css";
+import { DiGhostSmall } from "react-icons/di";
+import { RxCross2 } from "react-icons/rx";
 
 const Navbar = () => {
   const [text, setText] = useState("");
   const [i, setI] = useState(0);
-  const txt = "Aryan";
+  const txt = "Aryan Singh";
   const speed = 100;
 
   const [listItems, setListItems] = useState([""]);
-  const listTxt = [
-    "Home",
-    "About",
-    "Skill",
-    "Project",
-   
-    "Contact",
-  ];
-// "Experience", add this above when this is available
+  const listTxt = ["Home", "About", "Skill", "Project", "Contact"];
+  // "Experience", add this above when this is available
 
   const [scrollData, setScrollData] = useState({
     y: 0,
     lastY: 0,
   });
+
+  const [sidebarVisible, setSidebarVisible] = useState(false);
 
   useEffect(() => {
     const typeWriter = () => {
@@ -74,8 +71,6 @@ const Navbar = () => {
     }
   }, [scrollData]);
 
-
-
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -83,17 +78,22 @@ const Navbar = () => {
     }
   };
 
+
+
   return (
     <div id="header" className="n1">
-      <h1 className="n2">{text}</h1>
-      <ul className="n3">
-        {listItems.map((item, index) => (
-          <li key={index} onClick={() => scrollToSection(item.toLowerCase())}>
-            {item}
-          </li>
-        ))}
-      </ul>
-    </div>
+    <h1 className="n2">{text}</h1>
+    <ul className="n3">
+      {listItems.map((item, index) => (
+        <li key={index} onClick={() => scrollToSection(item.toLowerCase())}>
+          {item}
+        </li>
+      ))}
+    </ul>
+   
+  </div>
+
+    
   );
 };
 

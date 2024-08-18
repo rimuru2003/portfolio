@@ -32,41 +32,44 @@ const Project = () => {
 
   return (
     <>
-      
-      <h1 className="heads"> Recent projects</h1>
+      <h1 className="heads">Recent projects</h1>
 
-      <div className="projects-container" ref={scrollRef}>
-        {projects.length > 0 ? (
-          projects.map((proj, i) => (
-            <div className="project" key={i}>
-              <div className="hide">
-                <div className="project-inner">
-                  <div className="front-face">
-                    <img
-                      className="project-image"
-                      src={proj.img}
-                      alt={proj.title}
-                    />
-                  </div>
-                  <div className="back-face">
-                    <h1>{proj.title}</h1>
-                    <p>{proj.desc}</p>
+      <div className="projects-container-wrapper">
+        <div className="projects-container" ref={scrollRef}>
+          {projects.length > 0 ? (
+            projects.map((proj, i) => (
+              <div className="project" key={i}>
+                <div className="hide">
+                  <div className="project-inner">
+                    <div className="front-face">
+                      <img
+                        className="project-image"
+                        src={proj.img}
+                        alt={proj.title}
+                      />
+                    </div>
+                    <div className="back-face">
+                      <h1>{proj.title}</h1>
+                      <p>{proj.desc}</p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))
-        ) : (
-          <p>No projects available</p>
-        )}
+            ))
+          ) : (
+            <p>No projects available</p>
+          )}
+        </div>
       </div>
 
-      <button id="prev" onClick={scrollLeft}>
-        <MdOutlineKeyboardDoubleArrowLeft />
-      </button>
-      <button id="next" onClick={scrollRight}>
-        <MdOutlineKeyboardDoubleArrowRight />
-      </button>
+      <div className="btns">
+        <button id="prev" onClick={scrollLeft}>
+          <MdOutlineKeyboardDoubleArrowLeft />
+        </button>
+        <button id="next" onClick={scrollRight}>
+          <MdOutlineKeyboardDoubleArrowRight />
+        </button>
+      </div>
     </>
   );
 };
