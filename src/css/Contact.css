@@ -61,6 +61,8 @@
   padding: 25px 0 0;
   font-family: "Merienda", cursive;
   font-weight: 900;
+  /* font-weight: bold; */
+
   z-index: 2;
 }
 
@@ -263,7 +265,7 @@
   }
 
   .co11 {
-    font-size: 1rem; /
+    font-size: 1rem; 
   }
 
   .co7,
