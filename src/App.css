@@ -39,6 +39,8 @@ background: conic-gradient(from 0deg, #155A6E, #90B0B9);
 .headingfont{
     font-size: 2.8rem;
 }
-
+.hide-navbar {
+    display: none;
+  }
 
 

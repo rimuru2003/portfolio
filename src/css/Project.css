@@ -1,56 +1,39 @@
-/* Base styles */
-
+.central {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  margin: 150px auto;
+  
+  max-width: 1400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
 
 .heads {
-  padding: 80px 0 0 0;
-  font-family: "Merienda", cursive;
-  font-optical-sizing: auto;
-  font-weight: 900;
-  font-style: normal;
-  font-size: 3rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center; /* Ensure the text itself is centered */
-  margin: 0 auto; /* Center the .heads container */
-  
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
-.projects-container-wrapper {
-  display: flex;
-  justify-content: center; 
-  align-items:center;
+.splide {
   width: 100%;
-  padding:20px 0 0 0;
-
 }
-
-.projects-container {
-  display: flex;
-  justify-content: flex-start;
-  overflow-x: auto;
-  width: 1150px;
-  align-items: center;
-  gap: 50px;
-  padding: 50px 110px 30px 110px;
-  scroll-behavior: smooth;
-  /* background: black; */
-  
-
-}
-
-
 .project {
-  flex: 0 0 400px; 
   position: relative;
   height: 600px;
-  right: 80px;
   background: #155a6e;
+  margin-bottom: 30px;
+  margin-right: 20px;
   border-radius: 20px;
   text-align: center;
-  overflow: hidden;
-  filter:drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
-
+  overflow: hidden; 
+  filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
 }
 
 .project::before {
@@ -79,11 +62,13 @@
   transition: transform 0.6s ease-in-out;
   transform-style: preserve-3d;
   object-fit: cover;
+
 }
 
 .project-inner:hover {
   transform: rotateY(180deg);
 }
+
 
 .front-face,
 .back-face {
@@ -92,9 +77,10 @@
   left: 0;
   width: 100%;
   height: 100%;
+  border-radius: 20px; 
   backface-visibility: hidden;
+ 
 }
-
 .front-face {
   z-index: 2;
   object-fit: cover;
@@ -123,112 +109,102 @@
   margin: 2px 0 0 0;
   object-fit: cover;
 }
-
 .hide {
   position: absolute;
-  height: 98%;
+  height: 99%;
   width: 98%;
   background: #155a6e;
-  border-radius: 20px;
+  border-radius: 18px;
   top: 4px;
   left: 4px;
 }
 
-#next,
-#prev {
-  height: 2rem;
-  background-color: transparent;
+
+
+button {
+  padding: 12px 25px;
+  margin-top: 30px;
+  background-color: #007bff;
+  color: #fff;
   border: none;
-  font-size: 2.4rem;
+  border-radius: 8px;
   cursor: pointer;
-  color: white;
-  transition: transform 2s ease-in-out;
-  margin: 0 20px; /* Add margin to space them evenly */
-  padding: 0; /* Remove padding for consistent centering */
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.btns {
-  width: 100%; /* Full width to center the buttons within the container */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding:1rem 0 14.2rem 0;
+button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
 }
 
-
-
-/* Responsive Styles for 992px */
-@media (max-width: 992px) {
-
-
-  .heads {
-    margin: -46px 0 -10px 235px;
-    font-size: 2.2rem;
+@media (max-width: 991px) {
+  .project {
+    height: 500px;
   }
 
-  .projects-container {
-    width: 550px;
-    height:450px;
-    margin: -20px 0 0 35px;
-    gap: 20px;
-    padding: 50px 0 0 100px;
+  
+
+  button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .central {
+    width: 85%;
   }
 
   .project {
-    flex: 0 0 300px;
-    height: 420px;
-    filter:drop-shadow(4px 4px 4px rgba(0,0,0,0.6));
-
-  }
-
-  #next,
-  #prev {
-    font-size: 1.8rem;
-    margin: -0.5rem 1rem 0 0;
-    
-  }
-
-  #next {
-    right: 20rem;
-    
-  }
-
-  #prev {
-    left: 22rem;
-  }
-}
-
-@media (max-width: 600px) {
-
-
-  .heads {
-    margin: -26px 0 -10px 100px;
-    font-size: 1.8rem;
-  }
-
-  .projects-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 450px;
     width: 100%;
-    margin: -10px 0 0 10px;
-    gap: 10px;
-    padding: 30px;
+    margin: 0 15px 25px auto; 
+  
+  }
+
+  .heads {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 700px) {
+  .central {
+    width: 90%;
   }
 
   .project {
-    flex: 0 0 250px;
-    height: 300px;
-  }
-
-  #next,
-  #prev {
-    font-size: 1.4rem;
-    margin: -5rem 1rem 0 0;
-  }
-
-  #next {
-    right: 10rem;
-  }
-
-  #prev {
-    left: 12rem;
+    height: 450px;
+    width: 70%;
+    margin: 0 auto 25px auto; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
+@media (max-width: 500px) {
+
+ .project{
+  height:350px;
+ }
+
+}
+@media (max-width: 400px) {
+
+  .project{
+   height:300px;
+  }
+ 
+ }
+ @media (max-width: 320px) {
+
+  .project{
+   height:300px;
+  }
+ 
+ }
+

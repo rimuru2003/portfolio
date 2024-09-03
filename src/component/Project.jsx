@@ -1,77 +1,81 @@
-import React, { useEffect, useRef, useState } from "react";
-import "../css/Project.css";
-import {
-  MdOutlineKeyboardDoubleArrowRight,
-  MdOutlineKeyboardDoubleArrowLeft,
-} from "react-icons/md";
-import { useSelector } from "react-redux";
 
-const Project = () => {
-  const [projects, setProjects] = useState([]);
-  const reduxProjects = useSelector((state) => state?.counter?.items?.project);
+  import React, { useEffect, useState } from "react";
+  import "../css/Project.css";
+  import { Splide, SplideSlide } from "@splidejs/react-splide";
+  import { useSelector } from "react-redux";
+  import { Link } from "react-router-dom";
+  import '@splidejs/react-splide/css'; // Import Splide CSS
 
-  useEffect(() => {
-    if (reduxProjects) {
-      setProjects(reduxProjects);
-    }
-  }, [reduxProjects]);
+  const Project = () => {
+    const [projects, setProjects] = useState([]);
+    const reduxProjects = useSelector((state) => state?.counter?.items?.project);
 
-  const scrollRef = useRef(null);
+    useEffect(() => {
+      if (reduxProjects) {
+        setProjects(reduxProjects.slice(0, 3)); // Show only the first 3 projects
+      }
+    }, [reduxProjects]);
 
-  const scrollLeft = () => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollLeft -= 470;
-    }
-  };
+    return (
+      <div className="central">
+        <h1 className="heads">Recent projects</h1>
 
-  const scrollRight = () => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollLeft += 450;
-    }
-  };
-
-  return (
-    <>
-      <h1 className="heads">Recent projects</h1>
-
-      <div className="projects-container-wrapper">
-        <div className="projects-container" ref={scrollRef}>
+        <Splide
+          options={{
+            type: "loop",
+            perPage: 3,
+            perMove: 1,
+            gap: "10px",
+            pagination: false,
+            arrows: true,
+            breakpoints: {
+              1100: {
+                perPage: 2,
+              },
+              800: {
+                perPage: 2,
+              },
+              700: {
+                perPage:1,
+              }
+            },
+          }}
+          aria-label="Recent projects"
+        >
           {projects.length > 0 ? (
             projects.map((proj, i) => (
-              <div className="project" key={i}>
-                <div className="hide">
-                  <div className="project-inner">
-                    <div className="front-face">
-                      <img
-                        className="project-image"
-                        src={proj.img}
-                        alt={proj.title}
-                      />
-                    </div>
-                    <div className="back-face">
-                      <h1>{proj.title}</h1>
-                      <p>{proj.desc}</p>
+              <SplideSlide key={i}>
+                  <div className="project">
+                  <div className="hide">
+                    <div className="project-inner">
+                      <div className="front-face">
+                        <img
+                          className="project-image"
+                          src={proj.img}
+                          alt={proj.title}
+                        />
+                      </div>
+                      <div className="back-face">
+                        <h1>{proj.title}</h1>
+                        <p>{proj.desc}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </SplideSlide>
             ))
           ) : (
             <p>No projects available</p>
           )}
+        </Splide>
+
+        <div>
+          <Link to="/projects">
+            <button>More Projects</button>
+          </Link>
         </div>
       </div>
+    );
+  };
 
-      <div className="btns">
-        <button id="prev" onClick={scrollLeft}>
-          <MdOutlineKeyboardDoubleArrowLeft />
-        </button>
-        <button id="next" onClick={scrollRight}>
-          <MdOutlineKeyboardDoubleArrowRight />
-        </button>
-      </div>
-    </>
-  );
-};
-
-export default Project;
+  export default Project;

@@ -331,3 +331,8 @@
     width: 14rem;
   }
 }
+@media (max-width: 1400px){
+  .ho1{
+    padding-top:60px;
+  }
+}

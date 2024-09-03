@@ -4,6 +4,10 @@ body, html {
   box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
+.hide-navbar {
+  display: none !important;
+}
+
 
 .n1 {
   display: flex;
@@ -12,17 +16,17 @@ body, html {
   align-items: center;
   column-gap: 30px;
   padding-right: 10%;
-  /* background:black; */
-  /* color:white; */
-  position: sticky;
-
+  position: fixed; /* Changed from sticky to fixed */
+  top: 0; 
+  left: 0;
+  right: 0;
+z-index:100;
   backdrop-filter: blur(10px);
-  transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out, top 0.4s ease-in-out;
 }
 
 .n1.hideNav {
-  transform: translateY(-100%);
-}
+  transform: translateY(-100%);}
 
 .n2 {
   padding-left:70px;
