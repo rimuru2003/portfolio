@@ -29,12 +29,12 @@ const About = () => {
     <section id="about" className="a1">
         <h1 className="a7">About Me!</h1>
         <div className="a3">
-      <img className="a2" src={abimg} alt="About" />
-      <div className="a4">
-        <p className="a6">{aboutone}</p>
-        <p className="a6">{abouttwo}</p>
-        <p className="a6">{aboutthree}</p>
-      </div>
+          <img className="a2" src={abimg} alt="About" />
+          <div className="a4">
+          <p className="a6">{aboutone}</p>
+           <p className="a6">{abouttwo}</p>
+          <p className="a6">{aboutthree}</p>
+       </div>
       </div>
     </section>
   );

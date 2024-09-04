@@ -98,7 +98,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   padding: 20px;
   box-sizing: border-box;
   border-radius: 20px;
@@ -120,10 +120,16 @@
   top: 4px;
   left: 4px;
 }
+.splide__arrow--next {
+  right: 1em;
+}
+.splide__arrow--prev {
+  right: 1em;
+}
 
 
 
-button {
+.btnp{
   padding: 12px 25px;
   margin-top: 30px;
   background-color: #007bff;
@@ -136,7 +142,7 @@ button {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-button:hover {
+.btnp:hover {
   background-color: #0056b3;
   transform: translateY(-2px);
 }
@@ -148,7 +154,7 @@ button:hover {
 
   
 
-  button {
+  .btnp {
     padding: 10px 20px;
     font-size: 0.9rem;
   }

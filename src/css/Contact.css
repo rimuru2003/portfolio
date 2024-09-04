@@ -12,7 +12,7 @@
 .imgc {
   filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.6));
   mix-blend-mode: multiply;
-  height: 42rem;
+  height: auto;
 }
 
 .co3 {
@@ -61,7 +61,6 @@
   padding: 25px 0 0;
   font-family: "Merienda", cursive;
   font-weight: 900;
-  /* font-weight: bold; */
 
   z-index: 2;
 }
@@ -70,7 +69,7 @@
   margin: 0.3rem 0 0 1rem;
   text-align: center;
   width: 23rem;
-  font-size: 1.1rem;
+  font-size: auto;
   z-index: 2;
   font-family: "Nunito Sans", sans-serif;
   font-weight: 700;
@@ -115,7 +114,7 @@
 .co11 {
   height: auto; 
   width: auto;
-  padding: 0.5rem 1rem; 
+  /* padding: 0.5rem 1rem;  */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -124,9 +123,13 @@
   font-weight: 800;
   font-variation-settings: "wdth" 100, "YTLC" 500;
   border-radius: 15px;
-  font-size: 1.2rem;
-  transition: 0.4s ease;
+  font-size: 1.7rem;
+  transition:  0.3s ease, transform 0.3s ease;
   background: transparent;
+}
+
+.co11:hover {
+  transform: scale(1.1) translateY(2px);
 }
 
 @media (max-width: 1200px) {
@@ -159,7 +162,7 @@
   }
 
   .co11 {
-    font-size: 1rem; 
+    font-size: 1.5rem; 
   }
 }
 
@@ -180,33 +183,33 @@
   }
 
   .co3 {
-    height: 25rem;
+    height: 30rem;
     width: 20rem;
     margin: 0 -34px;
   }
 
   .co4 {
-    margin: 1rem 0 0 90px;
+    margin: -1rem 0 0 0;
     text-align: center;
     font-size: 1.5rem;
   }
 
-  .co6 {
-    padding-top: 1rem; 
-  }
+ 
 
   .co7,
   .co8,
   .co9,
   .co10 {
-    max-width: 13rem;
+    max-width: 15rem;
   }
+  
 
   .co11 {
     height: 2.5rem;
     width: 7rem;
-    font-size: 1.2rem;
-    margin: -72px 0 0 -149px;
+    font-size: 1.5rem;
+    /* margin: -72px 0 0 -149px; */
+    /* background:red; */
   }
 }
 
@@ -222,7 +225,8 @@
   }
 
   .co3 {
-    width: 90%;
+    width: 55%;
+    /* width: auto; */
     margin: 1rem 0;
   }
 
@@ -245,18 +249,16 @@
   }
 
   .co11 {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
 }
 
 @media (max-width: 550px) {
-  .co1 {
-    flex-direction: column; 
-  }
 
   .co3 {
-    height: 20rem;
-    width: 90%; 
+    height: auto;
+    width:75%;
+
   }
 
   .co4,
@@ -264,9 +266,7 @@
     margin: 0.5rem 0;
   }
 
-  .co11 {
-    font-size: 1rem; 
-  }
+  
 
   .co7,
   .co8,
@@ -278,17 +278,17 @@
 
 @media (max-width: 375px) {
   .co3 {
-    height: 15rem;
+    width:80%;
   }
 
   .co4,
   .co5 {
-    margin: 0.5rem 0;
+    /* margin: 0.5rem 0; */
     font-size: 0.8rem; 
   }
 
   .co11 {
-    font-size: 0.8rem; 
+    font-size: 1rem; 
   }
 
   .co7,

@@ -297,33 +297,39 @@
 
 @media (max-width: 375px) {
   .ho1 {
+   
   }
 
   .ho3 {
-    font-size: 1.2rem;
+    font-size: 1rem;
+    /* margin-left: 1rem; */
+
   }
 
   .ho4 {
     font-size: 1.2rem;
+    margin-left: 1rem;
+
   }
 
   .ho5 {
     width: 95%;
     font-size: 0.8rem;
+    margin-left: 1rem;
+
   }
 
-  .toggle {
-    width: 5.5rem;
-    height: 1.8rem;
-    font-size: 12px;
-  }
+ 
 
-  .size-6 {
-    height: 1rem;
+  .size-6{
+    margin-left: 1rem;
+
   }
 
   .ho6 {
     margin-top: 0;
+    margin-left: 1rem;
+
   }
 
   .ho7 {
