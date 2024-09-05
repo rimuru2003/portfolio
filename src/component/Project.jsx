@@ -11,7 +11,7 @@ const Project = () => {
 
   useEffect(() => {
     if (reduxProjects) {
-      setProjects(reduxProjects.slice(0, 3)); // Show only the first 3 projects
+      setProjects(reduxProjects.slice(0, 3)); // Show first 3 projects
     }
   }, [reduxProjects]);
 
@@ -57,6 +57,15 @@ const Project = () => {
                     <div className="back-face">
                       <h1>{proj.title}</h1>
                       <p>{proj.desc}</p>
+                      
+                      {proj.tools && proj.tools.length > 0 && (
+                        <div className="project-tools">
+                          {proj.tools.map((tool, index) => (
+                            <i key={index} className={tool}></i> 
+                          ))}
+                        </div>
+                      )}
+
                       <a
                         href={proj.projectLink}
                         target="_blank"

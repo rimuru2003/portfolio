@@ -1,9 +1,8 @@
+/* General Styles */
 .all-projects-wrapper {
   max-width: 1200px;
   margin: 40px auto;
   padding: 20px;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
@@ -13,66 +12,202 @@
 .projects-header {
   text-align: center;
   margin-bottom: 20px;
+  font-size: 2.5rem;
+  font-family: "Merienda", cursive;
+  font-optical-sizing: auto;
+  font-weight: 800;
 }
 
 .all-projects-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  width: 90%;
 }
 
 .single-project {
-  margin: 20px;
-  width: calc(33.33% - 20px);
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  margin: 10px 0;
 }
 
 .project-content {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   padding: 20px;
-  border: 1px solid #ddd;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .project-image-container {
-  width: 40%;
-  height: 200px;
+  flex: 1;
+  max-width: 40%;
   margin-right: 20px;
 }
 
 .project-image {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
-  border-radius: 10px 0 0 10px;
+  border-radius: 10px;
 }
 
 .project-desc-container {
-  width: 60%;
-  padding: 20px;
+  flex: 2;
+  max-width: 47%;
 }
 
 .project-desc-container h1 {
-  font-size: 18px;
+  font-size: 30px;
   margin-bottom: 10px;
+  color: black;
 }
 
 .project-desc-container p {
-  font-size: 14px;
-  color: #666;
+  font-size: 18px;
+  color: black;
+  text-align: start;
+
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
 }
 
-/* Media queries for responsive design */
+.btnp, .btng {
+  display: inline-block;
+  padding: 12px 25px;
+  margin-top: 20px;
+  font-weight: bold;
+  border: none;
+  color: black;
+  cursor: pointer;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
 
-@media (max-width: 768px) {
-  .single-project {
-    width: calc(50% - 20px);
+
+.btnp {
+  background-color: #007bff;
+}
+
+.btng:hover {
+  transform: translateY(2px);
+}
+
+.arrow-container {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+.arrow-icon {
+  width: 20px;
+  height: 20px;
+  fill: #121313;
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+  .project-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .project-image-container {
+    max-width: 80%;
+    margin-right: 0;
+  }
+  .project-image {
+    width: 75%;
+  
+  }
+
+  .project-desc-container {
+    max-width: 80%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+  }
+
+  .project-desc-container h1 {
+    font-size: 24px;
+  }
+
+  .project-desc-container p {
+    font-size: 16px;
+    width:100%;
+    text-align: center;
+
   }
 }
 
-@media (max-width: 480px) {
-  .single-project {
-    width: 100%;
+@media (max-width: 600px) {
+  .projects-header {
+    font-size: 2rem;
   }
+
+  .project-content {
+    padding: 15px;
+  }
+  .project-tools i{
+    font-size: 30px;
+
+  }
+
+  .project-desc-container h1 {
+    font-size: 20px;
+  }
+
+  .project-desc-container p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 400px) {
+  .projects-header {
+    font-size: 1.5rem;
+  }
+
+  .project-content {
+    padding: 10px;
+  }
+
+  .project-desc-container h1 {
+    font-size: 18px;
+  }
+  .project-tools i{
+    font-size: 18px;
+
+  }
+  .project-desc-container p {
+    font-size: 12px;
+  }
+
+  .btnp, .btng {
+    padding: 10px 20px;
+    font-size: 0.875rem;
+  }
+}
+@media (max-width: 320px) {
+  .project-tools {
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+    
+  }
+  .project-tools i{
+    font-size: 13px;
+    margin:0;
+    row-gap:20px;
+
+
+  }
+
+
 }
