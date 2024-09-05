@@ -1,0 +1,41 @@
+/* Footer.css */
+.footer {
+    padding: 1rem 1rem 1rem 1rem ;
+    text-align: center;
+    border-top:2px solid #155A6E;
+    
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.footer-link {
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .footer-link {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-link {
+        font-size: 1rem;
+        gap:2rem;
+    }
+}
+@media (max-width: 320px) {
+    .footer-link {
+        font-size: 1rem;
+        gap:0;
+    }
+}
