@@ -3,53 +3,53 @@ import { useSelector } from "react-redux";
 import "../css/Projectsection.css";
 
 const Projectsection = () => {
-  const [projects, setProjects] = useState([]);
-  const reduxProject = useSelector(
+  const [projectsdetail, setProjectsdetail] = useState([]);
+  const reduxProjectdetail = useSelector(
     (state) => state?.counter?.items?.project || []
   );
 
   useEffect(() => {
-    setProjects(reduxProject);
-  }, [reduxProject]);
+    setProjectsdetail(reduxProjectdetail);
+  }, [reduxProjectdetail]);
 
   return (
     <div className="all-projects-wrapper">
       <h1 className="projects-header">All Projects Details</h1>
       <div className="all-projects-container">
-        {projects.length > 0 ? (
-          projects.map((proj) => (
-            <div className="single-project" key={proj.title}>
+        {projectsdetail.length > 0 ? (
+          projectsdetail.map((projdetail) => (
+            <div className="single-project" key={projdetail.title}>
            
               <div className="project-content">
                 <div className="project-image-container">
                   <img
-                    className="project-image"
-                    src={proj.image} // Fixed property name from image to img
-                    alt={proj.title}
+                    className="project-images"
+                    src={projdetail.image} // Fixed property name from image to img
+                    alt={projdetail.title}
                   />
                 </div>
                 <div className="project-desc-container">
-                  <h1>{proj.title}</h1>
-                  <p>{proj.descdetail}</p>{" "}
-                  {/* Changed property name from descdetail to desc */}
-                  {proj.tools && proj.tools.length > 0 && (
+                  <h1>{projdetail.title}</h1>
+                  <p>{projdetail.descdetail}</p>{" "}
+                  
+                  {projdetail.tools && projdetail.tools.length > 0 && (
                     <div className="project-tools">
-                      {proj.tools.map((tool, index) => (
+                      {projdetail.tools.map((tool, index) => (
                         <i key={index} className={tool}></i>
                       ))}
                     </div>
                   )}
                   
                   <a
-                    href={proj.projectLink}
+                    href={projdetail.projectLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btnp"
+                    className="btnpd"
                   >
                     Visit Project
                   </a>
                   <a
-                    href={proj.github}
+                    href={projdetail.github}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btng"
@@ -61,7 +61,7 @@ const Projectsection = () => {
                         viewBox="0 0 32 32"
                         xmlns="http://www.w3.org/2000/svg"
                         xmlnsXlink="http://www.w3.org/1999/xlink"
-                        className="arrow-icon" // Add class name for styling
+                        className="arrow-icon" 
                       >
                         <path
                           clipRule="evenodd"

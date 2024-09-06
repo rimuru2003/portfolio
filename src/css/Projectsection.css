@@ -47,7 +47,7 @@
   margin-right: 20px;
 }
 
-.project-image {
+.project-images {
   width: 100%;
   height: auto;
   object-fit: cover;
@@ -76,7 +76,7 @@
   font-style: normal;
 }
 
-.btnp, .btng {
+.btnpd, .btng {
   display: inline-block;
   padding: 12px 25px;
   margin-top: 20px;
@@ -89,9 +89,12 @@
   border-radius: 5px;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+.btnpd:hover {
+  transform: translateY(-2px);
+}
 
 
-.btnp {
+.btnpd {
   background-color: #007bff;
 }
 
@@ -122,7 +125,7 @@
     max-width: 80%;
     margin-right: 0;
   }
-  .project-image {
+  .project-images {
     width: 75%;
   
   }
@@ -189,7 +192,7 @@
     font-size: 12px;
   }
 
-  .btnp, .btng {
+  .btnpd, .btng {
     padding: 10px 20px;
     font-size: 0.875rem;
   }
