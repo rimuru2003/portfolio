@@ -13,7 +13,7 @@
 }
 
 .footer-link {
-    font-size: 1.5rem;
+    font-size: 2rem;
     transition: color 0.3s ease;
 }
 
@@ -23,19 +23,19 @@
 
 @media (max-width: 768px) {
     .footer-link {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 }
 
 @media (max-width: 480px) {
     .footer-link {
-        font-size: 1rem;
+        font-size: 1.4rem;
         gap:2rem;
     }
 }
 @media (max-width: 320px) {
     .footer-link {
-        font-size: 1rem;
+        font-size: 1.3rem;
         gap:0;
     }
 }

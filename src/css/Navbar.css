@@ -23,6 +23,8 @@ body, html {
 z-index:100;
   backdrop-filter: blur(10px);
   transition: transform 0.4s ease-in-out, top 0.4s ease-in-out;
+  /* mix-blend-mode: difference; */
+
 }
 
 .n1.hideNav {

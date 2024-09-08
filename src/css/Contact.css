@@ -1,17 +1,19 @@
 .co1 {
   height: 45rem;
   display: flex;
+align-items:center;
   justify-content: space-evenly;
-  gap: 0 6rem;
-  padding-bottom:20px;
+  /* row-gap:auto; */
+  /* padding-bottom:20px; */
 }
 
 .co2 {
-  margin: -2rem 0 0 2rem;
+  /* margin: 2rem 0 0 2rem; */
+  align-self: center;
 }
 
 .imgc {
-  filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.6));
+  filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.3));
   mix-blend-mode: multiply;
   height: auto;
 }
@@ -20,9 +22,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: -4rem 0 5rem 0;
+  margin: 0 0 2rem 0;
   border-radius: 15px;
-  width: 35rem;
+  width: auto;
+  gap: 18px;  
   background: #155A6E;
   position: relative;
   overflow: hidden;
@@ -59,7 +62,7 @@
 }
 
 .co4 {
-  padding: 25px 0 0;
+  /* padding: 25px 0 0; */
   font-family: "Merienda", cursive;
   font-weight: 900;
 
@@ -67,10 +70,10 @@
 }
 
 .co5 {
-  margin: 0.3rem 0 0 1rem;
+  margin: 0 0 0 1rem;
   text-align: center;
   width: 23rem;
-  font-size: auto;
+  font-size: 18px;
   z-index: 2;
   font-family: "Nunito Sans", sans-serif;
   font-weight: 700;
@@ -81,11 +84,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
-  color: white;
+  gap: 18px;  
+  /* color: white; */
   z-index: 2;
-  mix-blend-mode: color-burn;
-  padding-top: 3rem;
+  /* mix-blend-mode: color-burn; */
+  background: transparent;
+background:#568896;
+  /* padding-top: 3rem; */
   width: 100%; 
   box-sizing: border-box; 
 }
@@ -97,7 +102,8 @@
   width: 100%; 
   max-width: 18rem; 
   height: 2rem;
-  border-radius: 5px;
+  border: 1px solid black ;
+  border-radius:5px;
   text-align: start;
   font-size: large;
   font-family: "Nunito Sans", sans-serif;
@@ -105,11 +111,13 @@
   font-variation-settings: "wdth" 100, "YTLC" 500;
   resize: none;
   box-sizing: border-box; 
+  background:#568896;
+
 }
 
 .co10 {
   min-height: 8rem;
-  border: 2px solid;
+  border: 1px solid;
 }
 
 .co11 {
@@ -127,8 +135,15 @@
   font-size: 1.7rem;
   transition:  0.3s ease, transform 0.3s ease;
   background: transparent;
-}
+  border: 2px solid black;
 
+}
+.co7::placeholder,
+.co8::placeholder,
+.co9::placeholder,
+.co10::placeholder {
+  color: #374151; 
+}
 .co11:hover {
   transform: scale(1.1) translateY(2px);
 }
@@ -137,22 +152,22 @@
   .co1 {
     display: flex;
     align-items: center;
-    margin: 8rem 0 0;
-    gap: 2rem;
+    /* margin: 8rem 0 0; */
+    /* gap: 2rem; */
   }
 
   .co3 {
-    width: 30rem;
+    /* width: 30rem; */
   }
 
   .co4,
   .co5 {
-    margin: 1rem 0;
+    /* margin: 1rem 0; */
     text-align: center;
   }
 
   .co6 {
-    padding-top: 2rem; 
+    /* padding-top: 2rem;  */
   }
 
   .co7,
@@ -169,14 +184,14 @@
 
 @media (max-width: 991px) {
   .imgc {
-    height: 23rem;
+    height: 24rem;
   }
 
   .co1 {
     align-items: center;
     height: auto;
     margin: 4rem 0 0 -4px;
-    gap: 2rem;
+    /* gap: 2rem; */
   }
 
   .co2 {
@@ -184,9 +199,9 @@
   }
 
   .co3 {
-    height: 30rem;
-    width: 20rem;
-    margin: 0 -34px;
+    /* height: 30rem; */
+    /* width: 20rem; */
+    /* margin: 0 -34px;   */
   }
 
   .co4 {
@@ -214,7 +229,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 800px) {
   .co1 {
     flex-direction: column;
     align-items: center;
@@ -240,7 +255,7 @@
   }
 
   .co6 {
-    padding-top: 1rem;
+    /* padding-top: 1rem; */
   }
 
   .co7,
@@ -248,10 +263,13 @@
   .co9,
   .co10 {
     max-width: 90%; 
+    border: 1px solid black;
   }
 
   .co11 {
     font-size: 1.3rem;
+    border: 1px solid black;
+
   }
 }
 
@@ -262,10 +280,19 @@
     width:75%;
 
   }
+  .co11{
+    color:#e2e8f0;
+  }
 
-  .co4,
+  .co4{
+    /* margin: 0.5rem 0; */
+    color:#fafafa;
+    font-size:30px;
+  }
   .co5 {
-    margin: 0.5rem 0;
+    /* margin: 0.5rem 0; */
+    color:#f5f5f5;
+    width:90%;
   }
 
   
@@ -275,19 +302,29 @@
   .co9,
   .co10 {
     max-width: 100%; 
+    color: #e5e5e5;
   }
+  .co7::placeholder,
+.co8::placeholder,
+.co9::placeholder,
+.co10::placeholder {
+  color: #d4d4d4; 
+}
+
 }
 
 @media (max-width: 375px) {
   .co3 {
     width:80%;
-    /* margin-left:5px; */
   }
 
-  .co4,
+  .co4{
+    
+    font-size:20px;
+  }
   .co5 {
-    /* margin: 0.5rem 0; */
-    font-size: 0.8rem; 
+    font-size:15px;
+
   }
 
   .co11 {
@@ -299,6 +336,7 @@
   .co9,
   .co10 {
     max-width: 100%; 
+    /* color: #e5e5e5 !important; */
   }
  
 }

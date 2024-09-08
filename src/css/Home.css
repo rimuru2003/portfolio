@@ -342,3 +342,10 @@
     padding-top:60px;
   }
 }
+@media (max-width: 320px){
+  .ho3{
+    width: 207px;
+    padding-left: 25px;
+
+  }
+}

@@ -2,6 +2,7 @@
     height: 800px;
    
     padding-top:50px;
+    /* padding-bottom:200px; */
   }
   
   .a2 {
@@ -33,7 +34,7 @@
   .a6 {
    
     height: auto;
-    width: 37rem;
+    width: 35rem;
     font-size: 1.3rem;
     text-align: start;
     font-family: "Nunito Sans", sans-serif;
@@ -140,6 +141,7 @@
       padding: 0;
       width: 100%;
       font-size: 0.9rem;
+      color:black;
     }
   }
   @media (max-width: 320px) {
