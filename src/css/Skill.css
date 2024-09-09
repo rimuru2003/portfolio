@@ -1,11 +1,13 @@
 .so1 {
-  display: grid;
-  place-items: center;
-  padding: 50px 0 0 0;
+  padding: 100px 0 0 0;
   max-width: 100%;
   margin: 0 auto;
   text-align: center;
-  overflow: hidden;   
+  overflow: hidden;
+  display: flex;
+  flex-direction:column;
+align-items:center;
+  justify-content: center; 
 }
 
 .skillheading {
@@ -17,11 +19,12 @@
 }
 
 .so2 {
-  width: auto;
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
- gap:20px;
-  place-items: center;
+ 
+  gap: 20px; 
+  margin: 0 auto;
+ width: 910px; 
+  columns:3;
+
 }
 
 .so3 {
@@ -31,7 +34,6 @@
   column-gap:0;
   place-items: center;
   margin: 0 20px;
-
 }
 
 .parent {
@@ -41,7 +43,9 @@
   padding: 20px;
   place-items: center;
   width:250px;
-
+  float:left;
+margin-top:10px;
+break-inside:avoid;
 
 }
 .skillname{
@@ -52,9 +56,7 @@
 
 
 .icon {
-  /* background:#f0fdf4; */
   font-size: 3rem;
-  /* margin: 15px; */
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
 
  
@@ -66,14 +68,11 @@
   transform: translateY(2px);
 }
 
-/* Responsive design for different screen sizes */
 @media (max-width: 550px) {
   .so2 {
-    grid-template-columns: repeat(1, 1fr); 
-    /* gap: 15px 0;    */
-    width: auto;
+    columns:1;  
+  width:250px;
   }
- 
 
   .icon {
     font-size: 2rem;
@@ -82,15 +81,13 @@
   .skillheading {
     font-size: 1.8rem;
   }
-  .parent{
-    width:250px;
+
+  .parent {
+    width: 250px;
   }
 }
-@media (max-width: 375px) {
-  .so3{
-    grid-template-columns: repeat(2, 1fr);
 
-  }
+@media (max-width: 375px) {
   .parent {
     width: 200px;
   }
@@ -98,9 +95,9 @@
 
 @media (min-width: 551px) and (max-width: 768px) {
   .so2 {
-    grid-template-columns: repeat(1, 1fr); 
-    gap: 20px;
-    width: 80%;
+    columns:1;
+    width:300px;
+    gap: 5px 20px;
   }
 
   .icon {
@@ -110,28 +107,28 @@
   .skillheading {
     font-size: 2rem;
   }
-  .parent{
-    width:250px;
+
+  .parent {
+    width: 250px;
   }
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 769px) and (max-width: 991px) {
   .so1 {
     padding: 4rem 0 0 0;
   }
 
   .so2 {
-    grid-template-columns: repeat(2, 1fr); 
-    /* gap:20px */
-    /* width: 80%; */
+   columns:2;
+   width:600px;
+    gap: 5px 20px;
   }
 
   .icon {
     font-size: 2.5rem;
   }
-  .parent{
-    width:250px;
+
+  .parent {
+    width: 250px;
   }
 }
-
-
