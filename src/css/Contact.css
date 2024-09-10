@@ -199,13 +199,12 @@ background:#568896;
   }
 
   .co3 {
-    /* height: 30rem; */
-    /* width: 20rem; */
-    /* margin: 0 -34px;   */
+    
+    padding: 1rem;
   }
 
   .co4 {
-    margin: -1rem 0 0 0;
+    margin: 0 0 0 0;
     text-align: center;
     font-size: 1.5rem;
   }

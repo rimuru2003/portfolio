@@ -71,7 +71,7 @@ break-inside:avoid;
 @media (max-width: 550px) {
   .so2 {
     columns:1;  
-  width:250px;
+  width:300px;
   }
 
   .icon {
@@ -90,6 +90,9 @@ break-inside:avoid;
 @media (max-width: 375px) {
   .parent {
     width: 200px;
+  }
+  .so2{
+    width:250px;
   }
 }
 
