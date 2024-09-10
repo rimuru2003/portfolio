@@ -1,0 +1,24 @@
+body{
+    background-color:white;
+
+}
+
+.loader-container {
+    position: fixed; 
+    top: 0;          
+    left: 0;         
+    width: 100vw;   
+    height: 100vh;   /* Sets the height to 100% of the viewport h
+    z-index: 50;     /* Ensures the loader appears above other elements */
+    display: flex;   
+    justify-content: center; /* Centers the loader horizontally */
+    align-items: center;     /* Centers the loader vertically */
+    background-color: white; /* Optional: Adds a semi-transparent background */
+  }
+  
+  .loader-img {
+    width: 400px;
+    height: 400px;
+    object-fit: contain;
+  }
+  
