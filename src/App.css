@@ -15,10 +15,7 @@
 
 
 body{
-/*
-* Created with https://www.css-gradient.com
-* Gradient link: https://www.css-gradient.com/?c1=155a6e&c2=90b0b9&gt=c&gd=dtt
-*/
+
 background: #155A6E;
 background: conic-gradient(from 0deg, #155A6E, #90B0B9);
 }
