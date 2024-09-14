@@ -19,12 +19,12 @@ const Experience = () => {
       {storeexperience ? (
         <div>
           <div className="eo1">
-            <h1 className="experheading">My Work Experience</h1>
+            <h1 className="experheading reveal">My Work Experience</h1>
           </div>
           <div className="eo2">
             {storeexperience.map((experience, index) => (
               <div className="w" key={index}>
-                <div className="eo3">
+                <div className="eo3 reveal">
                   <h2>{experience.workPlace}</h2>
                   <p>Position: {experience.position}</p>
                   <p>Location: {experience.location}</p>

@@ -40,12 +40,12 @@ const Footer = () => {
 
     return (
         <div className="footer">
-            <div className="footer-links">
+            <div className="footer-links ">
                 {links.map((link) => (
                     <a 
                         key={link.id} 
                         href={link.href} 
-                        className="footer-link" 
+                        className="footer-link reveal" 
                         style={{ color: link.color }}
                         target="_blank" 
                         rel="noopener noreferrer"

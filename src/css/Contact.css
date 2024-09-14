@@ -114,6 +114,15 @@ background:#568896;
   background:#568896;
 
 }
+.co7:focus,
+.co8:focus,
+.co9:focus,
+.co10:focus {
+  outline: none; 
+  border: 2px solid black; 
+  box-shadow: none; 
+}
+
 
 .co10 {
   min-height: 8rem;

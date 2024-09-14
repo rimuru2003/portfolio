@@ -6,6 +6,7 @@
   import { ToastContainer, toast } from "react-toastify";
   import 'react-toastify/dist/ReactToastify.css';
 
+
   const Contact = () => {
     const [con, setCon] = useState({
       name: "",
@@ -58,16 +59,16 @@
     return (
       <div className="co1">
         <div className="co2">
-          <img className="imgc" src={cont} alt="Contact" />
+          <img className="imgc reveal" src={cont} alt="Contact" />
         </div>
-        <div className="co3">
-          <h1 className="co4">Contact Me</h1>
-          <p className="co5">{cons}</p>
+        <div className="co3 reveal">
+          <h1 className="co4 reveal">Contact Me</h1>
+          <p className="co5 reveal">{cons}</p>
           <form className="co6" ref={form} onSubmit={sendEmail}>
             <input
               autoComplete="off"
               type="text"
-              className="co7"
+              className="co7 reveal"
               name="name"
               value={con.name}
               placeholder="Your Name:"
@@ -76,7 +77,7 @@
             <input
               autoComplete="off"
               type="email"
-              className="co8"
+              className="co8 reveal"
               name="email"
               value={con.email}
               placeholder="Email:"
@@ -85,7 +86,7 @@
             <input
               autoComplete="off"
               type="text"
-              className="co9"
+              className="co9 reveal"
               name="subject"
               value={con.subject}
               placeholder="Subject:"
@@ -93,14 +94,14 @@
             />
               <textarea
                 autoComplete="off"
-                className="co10 custom-scrollbar"
+                className="co10 custom-scrollbar reveal"
                 name="text"
                 value={con.text}
                 placeholder="Your Message:"
                 onChange={settingcon}
                 id="desc"
               />  
-            <button type="submit" className="co11">
+            <button type="submit" className="co11 reveal">
               Send
               <AiOutlineSend className="co12" />
             </button>

@@ -8,7 +8,8 @@ import Contact from "./component/Contact";
 import Projectsection from "./component/Projectsection";
 import Footer from "./component/Footer";
 import Loader from "./component/Loader"; // Import the Loader component
-
+import { initRevealOnScroll } from "./js/Scroll.js";
+// import Experience from "./component/Experience.jsx";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux"; // Add useSelector to access the state
 import { fetchdata } from "./redux/counterSlice";
@@ -16,14 +17,16 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   const dispatch = useDispatch();
-  const status = useSelector((state) => state.counter.status); // Get the status from Redux
+  const status = useSelector((state) => state.counter.status); 
 
   useEffect(() => {
     dispatch(fetchdata());
+    initRevealOnScroll();
+
   }, [dispatch]);
 
   if (status === "loading") {
-    return <Loader />; // Show the Loader component when the status is "loading"
+    return <Loader />; 
   }
 
   return (

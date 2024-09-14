@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../css/Home.css";
-
+import { initRevealOnScroll } from "../js/Scroll.js"; // Make sure this points to the correct path
 import { useSelector } from "react-redux";
 import Profile from "../pic/profile.jpeg";
 
@@ -13,22 +13,25 @@ const Home = () => {
   const name = items.home?.find((item) => item.nametag)?.nametag || "";
   const work = items.home?.find((item) => item.work)?.work || "";
   const desc = items.home?.find((item) => item.desc)?.desc || "";
-  const resume = items.home?.find((item) => item.resume)?.resume || ""; // Ensure this fetches the resume link
+  const resume = items.home?.find((item) => item.resume)?.resume || "";
 
   const speed = 50;
 
-  
-
+  // Typewriter effect for the name
   useEffect(() => {
     if (w < name.length) {
       const textapp = () => {
-        setPara((a) => `${a}${name.charAt(w)}`);
-        setW((prevI) => prevI + 1);
+        setPara((prev) => `${prev}${name.charAt(w)}`);
+        setW((prevW) => prevW + 1);
       };
       const timer = setTimeout(textapp, speed);
       return () => clearTimeout(timer);
     }
   }, [w, name]);
+
+  useEffect(() => {
+    initRevealOnScroll();
+  }, []);
 
   const handleResumeClick = () => {
     if (resume) {
@@ -39,11 +42,11 @@ const Home = () => {
   return (
     <div className="ho1">
       <div className="ho2">
-        <h1 className="ho3">{para}</h1>
-        <h2 className="ho4">{work}</h2>
-        <p className="ho5">{desc}</p>
+        <h1 className="ho3 reveal">{para}</h1>
+        <h2 className="ho4 reveal">{work}</h2>
+        <p className="ho5 reveal">{desc}</p>
 
-        <button className="btn" onClick={handleResumeClick}>
+        <button className="btn reveal" onClick={handleResumeClick}>
           Resume
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -62,7 +65,7 @@ const Home = () => {
         </button>
       </div>
       <span className="ho6">
-        <img className="ho7" src={Profile} alt="image" />
+        <img className="ho7 reveal" src={Profile} alt="Profile" />
       </span>
     </div>
   );

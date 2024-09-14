@@ -14,26 +14,26 @@ const Projectsection = () => {
 
   return (
     <div className="all-projects-wrapper">
-      <h1 className="projects-header">All Projects Details</h1>
+      <h1 className="projects-header reveal">All Projects Details</h1>
       <div className="all-projects-container">
         {projectsdetail.length > 0 ? (
           projectsdetail.map((projdetail) => (
             <div className="single-project" key={projdetail.title}>
            
-              <div className="project-content">
-                <div className="project-image-container">
+              <div className="project-content reveal">
+                <div className="project-image-container reveal">
                   <img
-                    className="project-images"
+                    className="project-images reveal"
                     src={projdetail.image} // Fixed property name from image to img
                     alt={projdetail.title}
                   />
                 </div>
-                <div className="project-desc-container">
+                <div className="project-desc-container reveal">
                   <h1>{projdetail.title}</h1>
                   <p>{projdetail.descdetail}</p>{" "}
                   
                   {projdetail.tools && projdetail.tools.length > 0 && (
-                    <div className="project-tools">
+                    <div className="project-tools reveal">
                       {projdetail.tools.map((tool, index) => (
                         <i key={index} className={tool}></i>
                       ))}
@@ -44,7 +44,7 @@ const Projectsection = () => {
                     href={projdetail.projectLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btnpd"
+                    className="btnpd reveal"
                   >
                     Visit Project
                   </a>
@@ -52,10 +52,10 @@ const Projectsection = () => {
                     href={projdetail.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btng"
+                    className="btng reveal"
                   >
                     Code Source
-                    <div className="arrow-container">
+                    <div className="arrow-container ">
                       <svg
                         
                         viewBox="0 0 32 32"

@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import "../css/About.css";
 import { useSelector } from "react-redux";
 
+
 const About = () => {
   const [abimg, setAbimg] = useState(null);
   const [aboutone, setAboutone] = useState(null);
@@ -27,13 +28,13 @@ const About = () => {
 
   return (
     <section id="about" className="a1">
-        <h1 className="a7">About Me!</h1>
+        <h1 className="a7 reveal">About Me!</h1>
         <div className="a3">
-          <img className="a2" src={abimg} alt="About" />
+          <img className="a2 reveal" src={abimg} alt="About" />
           <div className="a4">
-          <p className="a6">{aboutone}</p>
-           <p className="a6">{abouttwo}</p>
-          <p className="a6">{aboutthree}</p>
+          <p className="a6 reveal">{aboutone}</p>
+           <p className="a6 reveal">{abouttwo}</p>
+          <p className="a6 reveal">{aboutthree}</p>
        </div>
       </div>
     </section>

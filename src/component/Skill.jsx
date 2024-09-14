@@ -13,17 +13,17 @@ const Skill = () => {
   return (
     <>
       <div className="so1">
-        <h1 className="skillheading">Stack</h1>
-        <div className="so2">
+        <h1 className="skillheading reveal">Stack</h1>
+        <div className="so2 reveal">
           {Object.keys(skills).map((category, index) => {
 
             const skillList = skills[category];
             const categoryName = skillList.find((item) => item?.name)?.name || category;
 
             return (
-              <div key={index} className="parent">
-                <h1 className="skillname">{categoryName}</h1>
-                <div className="so3">
+              <div key={index} className="parent reveal">
+                <h1 className="skillname revela">{categoryName}</h1>
+                <div className="so3 reveal">
                   {skillList
                     .map((skill, i) => (
                       <i key={i} className={`${skill} icons`} ></i>

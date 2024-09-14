@@ -17,7 +17,7 @@ const Project = () => {
 
   return (
     <div className="central">
-      <h1 className="heads">Recent projects</h1>
+      <h1 className="heads reveal">Recent projects</h1>
 
       <Splide
         options={{
@@ -44,7 +44,7 @@ const Project = () => {
         {projects.length > 0 ? (
           projects.map((proj, i) => (
             <SplideSlide key={i}>
-              <div className="project">
+              <div className="project reveal">
                 <div className="hide">
                   <div className="project-inner">
                     <div className="front-face">
