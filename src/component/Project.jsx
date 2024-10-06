@@ -21,7 +21,7 @@ const Project = () => {
 
       <Splide
         options={{
-          type: "loop",
+          // type: "loop",
           perPage: 3,
           perMove: 1,
           gap: "10px",
