@@ -17,16 +17,15 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   const dispatch = useDispatch();
-  const status = useSelector((state) => state.counter.status); 
+  const status = useSelector((state) => state.counter.status);
 
   useEffect(() => {
     dispatch(fetchdata());
     initRevealOnScroll();
-
   }, [dispatch]);
 
   if (status === "loading") {
-    return <Loader />; 
+    return <Loader />;
   }
 
   return (
