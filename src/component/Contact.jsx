@@ -4,7 +4,7 @@ import emailjs from "@emailjs/browser";
 import { AiOutlineSend } from "react-icons/ai";
 import { useSelector } from "react-redux";
 import { ToastContainer, toast } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 import ReCAPTCHA from "react-google-recaptcha";
 
 const Contact = () => {
@@ -19,7 +19,6 @@ const Contact = () => {
   const form = useRef();
 
   const [captchaVerified, setCaptchaVerified] = useState(false); // Captcha state
-
   const [cons, setCons] = useState(null);
   const contabout = items.info?.find((item) => item.contactMe)?.contactMe || "";
   const imga = items.img?.find((item) => item.contact)?.contact || "";
@@ -32,24 +31,25 @@ const Contact = () => {
   const settingcon = (e) => {
     setCon({ ...con, [e.target.name]: e.target.value });
   };
-
   const onCaptchaChange = (value) => {
     setCaptchaVerified(!!value); // If value exists, captcha is verified
   };
 
   const sendEmail = (e) => {
     e.preventDefault();
-    
     const { name, email, subject, text } = con;
-
     if (!captchaVerified) {
       toast.error("Please verify the CAPTCHA.");
       return;
     }
-
     if (name && email && subject && text) {
       emailjs
-        .sendForm("service_oef3i38", "template_2uxlppp", form.current, "P5Sm3jFvsLS-rA0Ol")
+        .sendForm(
+          "service_oef3i38",
+          "template_2uxlppp",
+          form.current,
+          "P5Sm3jFvsLS-rA0Ol"
+        )
         .then(
           () => {
             toast.success("Email sent successfully!");
@@ -110,13 +110,13 @@ const Contact = () => {
             onChange={settingcon}
             id="desc"
           />
-          
+
           {/* CAPTCHA Component */}
-          <ReCAPTCHA className="recapt"
+          <ReCAPTCHA
+            className="recapt"
             sitekey="6LdJ7koqAAAAAB5wqbgJd_S2I4vbSCR6KUX2WXCu" // Replace with your site key
             onChange={onCaptchaChange}
           />
-
           <button type="submit" className="co11 reveal">
             Send
             <AiOutlineSend className="co12" />
@@ -127,5 +127,4 @@ const Contact = () => {
     </div>
   );
 };
-
 export default Contact;
