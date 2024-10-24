@@ -31,6 +31,7 @@ const Contact = () => {
   const settingcon = (e) => {
     setCon({ ...con, [e.target.name]: e.target.value });
   };
+
   const onCaptchaChange = (value) => {
     setCaptchaVerified(!!value); // If value exists, captcha is verified
   };
@@ -45,10 +46,10 @@ const Contact = () => {
     if (name && email && subject && text) {
       emailjs
         .sendForm(
-          "service_oef3i38",
-          "template_2uxlppp",
+          process.env.REACT_APP_EMAILJS_SERVICE_ID,
+          process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
           form.current,
-          "P5Sm3jFvsLS-rA0Ol"
+          process.env.REACT_APP_EMAILJS_PUBLIC_KEY
         )
         .then(
           () => {
@@ -114,7 +115,7 @@ const Contact = () => {
           {/* CAPTCHA Component */}
           <ReCAPTCHA
             className="recapt"
-            sitekey="6LdJ7koqAAAAAB5wqbgJd_S2I4vbSCR6KUX2WXCu" // Replace with your site key
+            sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY} // Using env variable for reCAPTCHA key
             onChange={onCaptchaChange}
           />
           <button type="submit" className="co11 reveal">
@@ -127,4 +128,5 @@ const Contact = () => {
     </div>
   );
 };
+
 export default Contact;
