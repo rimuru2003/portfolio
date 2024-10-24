@@ -115,7 +115,7 @@ const Contact = () => {
           {/* CAPTCHA Component */}
           <ReCAPTCHA
             className="recapt"
-            sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY} // Using env variable for reCAPTCHA key
+            sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
             onChange={onCaptchaChange}
           />
           <button type="submit" className="co11 reveal">
