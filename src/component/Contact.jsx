@@ -46,10 +46,10 @@ const Contact = () => {
     if (name && email && subject && text) {
       emailjs
         .sendForm(
-          process.env.REACT_APP_EMAILJS_SERVICE_ID,
-          process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+          "service_oef3i38",
+          "template_2uxlppp",
           form.current,
-          process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+          "P5Sm3jFvsLS-rA0Ol"
         )
         .then(
           () => {
@@ -115,7 +115,7 @@ const Contact = () => {
           {/* CAPTCHA Component */}
           <ReCAPTCHA
             className="recapt"
-            sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
+            sitekey="6LdJ7koqAAAAAB5wqbgJd_S2I4vbSCR6KUX2WXCu" // Replace with your site key
             onChange={onCaptchaChange}
           />
           <button type="submit" className="co11 reveal">
